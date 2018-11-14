@@ -5,27 +5,30 @@ import { Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
 class App extends Component {
   render() {
     return (
-      <div style={{height: '1000px', position: 'relative', background: '#34888C'}}>
-    <Layout fixedHeader>
-        <Header transparent title="DIATOT" style={{color: 'white'}}>
-            <Navigation>
-                <a href="/">Hej</a>
-                <a href="/">på</a>
-                <a href="/">dig</a>
-                <a href="/">min bror</a>
-            </Navigation>
-        </Header>
-        <Drawer title="Title">
-            <Navigation>
-                <a href="/">Settings</a>
-                <a href="/">Your diary</a>
-                <a href="/">Add</a>
-                <a href="Sök">Blood</a>
-            </Navigation>
-        </Drawer>
-        <Content />
-    </Layout>
-</div>
+    <div>
+      <div style={{height: '200px', position: 'relative', background: '#34888C'}}>
+        <Layout fixedHeader>
+          <Header transparent title="DIATOT" style={{color: 'white'}}>
+              <Navigation>
+                  <a href="/">Hej</a>
+                  <a href="/">på</a>
+                  <a href="/">dig</a>
+                  <a href="/">min bror</a>
+              </Navigation>
+          </Header>
+          <Drawer title="Title">
+              <Navigation>
+                  <a href="/">Settings</a>
+                  <a href="/">Your diary</a>
+                  <a href="/">Add</a>
+                  <a href="Sök">Blood</a>
+              </Navigation>
+          </Drawer>
+          <Content />
+      </Layout>
+      </div>
+      <div className="mainButton">KNAPP</div>
+    </div>
     );
   }
 }
