@@ -1,24 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Media from "react-media";
+{/*import logo from './logo.svg';*/}
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Ändra <code>src/App.js</code> så ska vi göra kul. Ni är väldig smarta som kommit på att man ska göra såhär.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          {/*<img src={} className="" alt="" />*/}
+          <p>Här ska nått vara</p>
+
         </header>
       </div>
     );
