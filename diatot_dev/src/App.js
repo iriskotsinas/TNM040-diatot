@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
+import logo from './logo.png';
 
 class App extends Component {
   render() {
@@ -9,6 +10,9 @@ class App extends Component {
       <div style={{height: '200px', position: 'relative', background: '#34888C'}}>
         <Layout fixedHeader>
           <Header transparent title="DIATOT" style={{color: 'white'}}>
+            <div>
+              <img src={logo} height="100" alt="logo" />
+            </div>
               <Navigation>
                   <a href="/">Hej</a>
                   <a href="/">på</a>
