@@ -10,7 +10,7 @@ class App extends Component {
       <div style={{height: '200px', position: 'relative', background: '#34888C'}}>
         <Layout fixedHeader>
           <Header transparent title="DIATOT" style={{color: 'white'}}>
-            <div>
+            <div class="center">
               <img src={logo} height="100" alt="logo" />
             </div>
               <Navigation>

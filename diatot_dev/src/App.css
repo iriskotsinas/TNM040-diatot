@@ -7,7 +7,13 @@
   height: 40vmin;
 }*/
 
-
+/*EMMA ADDERAR KOD för att centrera loggan:*/
+.center{
+  margin: auto;
+  text-align: center;
+  width: 60%;
+  padding: 10px;
+}
 
 .App-header {
   background-color: #282c34;
