@@ -7,13 +7,18 @@
   height: 40vmin;
 }*/
 
-/*EMMA ADDERAR KOD för att centrera loggan:*/
+/*EMMA ADDERAR KOD för att centrera:*/
 .center{
   margin: auto;
   text-align: center;
-  width: 60%;
-  padding: 10px;
 }
+
+.hamburger{
+  height: 100px;
+  position: 'relative';
+  background: '#9bcbd6';
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -26,16 +31,21 @@
   color: white;
 }
 
+.bloodgraph{
+  text-align: center;
+  margin-top: 100px;
+}
+
 .mainButton {
   padding-top:30px;
 	width: 200px;
 	height: 60px;
-  background-color: #34888C;
+  background-color: #9bcbd6;
   margin: 2px;
   text-align: center;
   font-size: 20pt;
   margin-left: 600px;
-  margin-top: 200px;
+  margin-top: 60px;
   color: #FFFFFF;
 }
 
