@@ -8,6 +8,7 @@
     "react-button-component": "^1.0.0",
     "react-dom": "^16.6.1",
     "react-mdl": "^1.11.0",
+    "react-media": "^1.8.0",
     "react-native-button": "^2.3.0",
     "react-scripts": "2.1.1"
   },
