@@ -35,6 +35,10 @@ class App extends Component {
                 <img src={bloodglucose} height="400" alt="bloodglucose" />
               </div>
               <div className="mainButton">KNAPP</div>
+              <div className="center">
+                <div className="smallButtons">KNAPP2</div>
+                <div className="smallButtons">KNAPP3</div>
+              </div>
             </Content>
           </Layout>
       </div>
