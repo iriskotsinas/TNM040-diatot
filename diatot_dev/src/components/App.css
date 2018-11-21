@@ -21,15 +21,23 @@
 
 
 .App-header {
-  background-color: #282c34;
+  background-color: #F5F4EE;  /* #282c34 */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  font-family: "open sans", sans-serif;
+  font-weight: bold;
   color: white;
 }
+
+.logoTop {
+    margin-top: 20px;
+
+}
+
 
 .bloodgraph {
   text-align: center;
@@ -92,15 +100,17 @@ p {
 
 .mainButton {
   font-size: 22pt;
+  font-family: "open sans", sans-serif;
+  font-weight: bold;
   color: #ffffff;
   padding: 25px 25px;
   background-color: #88bbd6;  /*5595B0*/
   text-align: center;
   line-height: 50%;
   height: 10px;
-  width: 200px;
+  width: 220px;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 28%;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -115,6 +125,8 @@ p {
  }
 
  .smallButtons {
+   font-family: "open sans", sans-serif;
+   font-weight: bold;
    font-size: 12pt;
    color: #ffffff;
    padding: 25px 25px;
@@ -123,10 +135,10 @@ p {
    /*line-height: 50%;*/
    vertical-align: middle;
    height: 5px;
-   width: 65px;
-   margin-left: 2%;
-   margin-right: 2%;
-   margin-top: 30px;
+   width: 73px;
+   margin-left: 3%;
+   margin-right: 3%;
+   margin-top: 25px;
    display: inline-block;
    border-radius: 4px;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
 import './App.css';
-import logo from './img/logo.png';
+import logo_bgtrans from './img/logo_bgtrans.png';
 import bloodglucose from './img/bloodglucose.png';
 import blood_drop from './img/blood_drop.png';
 import sensor_icon_50p from './img/sensor_icon_50p.png';
@@ -18,7 +18,7 @@ export default class FirstPage extends Component {
             <Header transparent style={{color: 'white'}}>
               <div class="center">
               <a href="firstpage" style={{textDecoration: 'none'}}>
-                <img src={logo} height="100" alt="logo" /></a>
+                <img class="logoTop" src={logo_bgtrans} height="70" alt="logo_bgtrans" /></a>
               </div>
                   <Navigation>
                     <a href="/">Help</a>
@@ -32,16 +32,16 @@ export default class FirstPage extends Component {
                     <a href="Sök">Blood</a>
                   </Navigation>
               </Drawer>
-            <Content style={{backgroundColor: "#FAFAFB"}}>
+            <Content style={{backgroundColor: "rgb(245,245,246)"}}>
               <div class="bloodgraph">
                 <img className="graph" src={bloodglucose} alt="bloodglucose" />
               </div>
               <a href="log" style={{textDecoration: 'none'}}>
               <div className="mainButton">New log +</div></a>
-              <div className="controlGlucose">
+          {/*    <div className="controlGlucose">
                 <p>Control Glucose
                 </p>
-              </div>
+              </div>  */}
               <div className="center">
                 <div className="smallButtons">CGM <img className ="sensor_icon" src={sensor_icon_50p} alt="sensor_icon" />
                 </div>
