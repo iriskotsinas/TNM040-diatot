@@ -13,7 +13,7 @@
   text-align: center;
 }
 
-.hamburger{
+.hamburger {
   height: 100px;
   position: 'relative';
   background: '#9bcbd6';
@@ -36,16 +36,73 @@
   margin-top: 100px;
 }
 
+.topBar {
+/*
+  height: auto;
+  width: 100%;
+  margin-bottom: 80%;
+  background: #FFFFF;*/
+
+/*  style={{height: '100px', position: 'fixedHeader', background: '#FFFFF'}}  */
+  background-color: #9bcbd6;
+  height: 100px;
+  /*position: fixedHeader;*/
+
+
+  box-shadow: 10px 10px grey;
+}
+
+.graph {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: auto;
+}
+
+.blood_drop {
+  /*display: block;*/
+  margin-left: auto;
+  margin-right: auto;
+  /*line-height: 10px;
+  vertical-align: middle;*/
+
+  width: 20%;
+  height: auto;
+}
+
+.sensor_icon{
+  /*display: block;*/
+  margin-left: auto;
+  margin-right: auto;
+  /*line-height: 10px;
+  vertical-align: middle;*/
+
+  width: 27%;
+  height: auto;
+}
+
+.controlGlucose{
+  /* Fyll med något */
+}
+
+p {
+  /* Fyll med något */
+}
+
 .mainButton {
-  font-size: 20pt;
-  color: #FFFFFF;
-  padding: 40px 40px;
-  background-color: #5595B0;
+  font-size: 22pt;
+  color: #ffffff;
+  padding: 25px 25px;
+  background-color: #88bbd6;  /*5595B0*/
   text-align: center;
-  height: 25px;
-  width: 400px;
+  line-height: 50%;
+  height: 10px;
+  width: 200px;
   margin: 0 auto;
   margin-top: 40px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .mainButton:hover {
@@ -53,22 +110,26 @@
   border: none;
   color: white;
   opacity: 0.6;
-  transition: 0.5s;
-  transform: scale(1.1);
+  transition: 0.3s;
+  /*transform: scale(1.1);*/
  }
 
  .smallButtons {
-   font-size: 20pt;
-   color: #FFFFFF;
-   padding: 40px 40px;
-   background-color: #5595B0;
+   font-size: 12pt;
+   color: #ffffff;
+   padding: 25px 25px;
+   background-color: #88bbd6;
    text-align: center;
-   height: 20px;
-   width: 150px;
-   margin-left: 10px;
-   margin-right: 10px;
+   /*line-height: 50%;*/
+   vertical-align: middle;
+   height: 5px;
+   width: 65px;
+   margin-left: 2%;
+   margin-right: 2%;
    margin-top: 30px;
    display: inline-block;
+   border-radius: 4px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  }
 
  .smallButtons:hover {
@@ -77,7 +138,7 @@
    color: white;
    opacity: 0.6;
    transition: 0.5s;
-   transform: scale(1.1);
+   /*transform: scale(1.1);*/
   }
 
 .App-link {
@@ -103,6 +164,9 @@
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+    .graph {
+      width: 20em;
+    }
 }
 
 /* Portrait */
@@ -157,6 +221,9 @@
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+    .graph {
+      width: 23em;
+    }
 }
 
 /* Portrait */
@@ -184,6 +251,7 @@
   and (min-device-width: 414px)
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3) {
+
 
 }
 
@@ -214,6 +282,10 @@
   and (-webkit-min-device-pixel-ratio: 3) {
     body {
       background-color: lightblue;
+    }
+
+    .graph {
+      width: 23em;
     }
 }
 

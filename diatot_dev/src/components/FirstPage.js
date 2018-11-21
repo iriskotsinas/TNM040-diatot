@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
 import './App.css';
-import logo from './logo.png';
-import bloodglucose from './bloodglucose.jpg';
+import logo from './img/logo.png';
+import bloodglucose from './img/bloodglucose.png';
+import blood_drop from './img/blood_drop.png';
+import sensor_icon_50p from './img/sensor_icon_50p.png';
+
 
 export default class FirstPage extends Component {
   render() {
@@ -10,7 +13,7 @@ export default class FirstPage extends Component {
     <div>
     {/* using CommonJS modules*/}
     {/*var Media = require("react-media");*/}
-        <div style={{height: '100px', position: 'fixedHeader', background: '#9bcbd6'}}>
+        <div className="topBar" >
           <Layout fixedHeader>
             <Header transparent style={{color: 'white'}}>
               <div class="center">
@@ -29,16 +32,21 @@ export default class FirstPage extends Component {
                     <a href="Sök">Blood</a>
                   </Navigation>
               </Drawer>
-            <Content style={{backgroundColor: "#9bcbd6"}}>
+            <Content style={{backgroundColor: "#FAFAFB"}}>
               <div class="bloodgraph">
-                <img src={bloodglucose} height="400" alt="bloodglucose" />
+                <img className="graph" src={bloodglucose} alt="bloodglucose" />
               </div>
               <a href="log" style={{textDecoration: 'none'}}>
-              <div className="mainButton">
-              KNAPP</div></a>
+              <div className="mainButton">New log +</div></a>
+              <div className="controlGlucose">
+                <p>Control Glucose
+                </p>
+              </div>
               <div className="center">
-                <div className="smallButtons">KNAPP2</div>
-                <div className="smallButtons">KNAPP3</div>
+                <div className="smallButtons">CGM <img className ="sensor_icon" src={sensor_icon_50p} alt="sensor_icon" />
+                </div>
+                <div className="smallButtons">BG <img className ="blood_drop" src={blood_drop} alt="blood_drop" />
+                </div>
               </div>
             </Content>
           </Layout>
