@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
 import './App.css';
-import logo_bgtrans from './img/logo_bgtrans.png';
+import logo from './img/logo.png';
 import bloodglucose from './img/bloodglucose.png';
 import blood_drop from './img/blood_drop.png';
 import sensor_icon_50p from './img/sensor_icon_50p.png';
@@ -18,7 +18,7 @@ export default class FirstPage extends Component {
             <Header transparent style={{color: 'white'}}>
               <div class="center">
               <a href="firstpage" style={{textDecoration: 'none'}}>
-                <img class="logoTop" src={logo_bgtrans} height="70" alt="logo_bgtrans" /></a>
+                <img class="logoTop" src={logo} height="70" alt="logo" /></a>
               </div>
                   <Navigation>
                     <a href="/">Help</a>

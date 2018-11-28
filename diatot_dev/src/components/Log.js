@@ -18,6 +18,9 @@ export default class Log extends Component {
                   <img src={logo_bgtrans} height="50" alt="logo_bgtrans"/>
                 </a>
               </div>
+
+
+
                   <Navigation>
                     <a href="/">Help</a>
                   </Navigation>
