@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Route, BrowserRouter} from 'react-router-dom';
-import FirstPage from "./components/FirstPage";
-import Log from "./components/Log";
+import Mainpage from "./components/mainpage";
+import Newlog from "./components/newlog";
 
 class App extends Component {
   render() {
@@ -10,17 +10,17 @@ class App extends Component {
         <div>
           <Route exact={true} path='/' render={() => (
             <div className="App">
-              <FirstPage/>
+              <Mainpage/>
             </div>
           )}/>
-          <Route exact={true} path='/log' render={() => (
+          <Route exact={true} path='/newlog' render={() => (
             <div className="App">
-              <Log/>
+              <Newlog/>
             </div>
           )}/>
-          <Route exact={true} path='/firstpage' render={() => (
+          <Route exact={true} path='/mainpage' render={() => (
             <div className="App">
-              <FirstPage/>
+              <Mainpage/>
             </div>
           )}/>
         </div>

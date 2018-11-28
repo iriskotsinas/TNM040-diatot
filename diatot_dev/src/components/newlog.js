@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
-import logo_bgtrans from './img/logo_bgtrans.png';
+import logo from './img/logo.png';
 //import FirstPage from "./components/FirstPage";
 
-export default class Log extends Component {
+export default class Newlog extends Component {
   render() {
     return (
     <div>
@@ -13,9 +13,9 @@ export default class Log extends Component {
         <div style={{height: '100px', position: 'fixedHeader', background: '#9bcbd6'}}>
           <Layout fixedHeader>
             <Header transparent style={{color: 'white'}}>
-              <div class="center">
-                <a href="firstpage">
-                  <img src={logo_bgtrans} height="50" alt="logo_bgtrans"/>
+              <div className="center">
+                <a href="mainpage">
+                  <img className="logoTop" src={logo} height="70" alt="logo" />
                 </a>
               </div>
 
@@ -33,7 +33,7 @@ export default class Log extends Component {
                     <a href="Sök">Blood</a>
                   </Navigation>
               </Drawer>
-            <Content style={{backgroundColor: "#9bcbd6"}}>
+            <Content style={{backgroundColor: "rgb(245,245,246)"}}>
             </Content>
           </Layout>
       </div>
