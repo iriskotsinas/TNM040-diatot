@@ -18,7 +18,25 @@
   position: 'relative';
   background: '#9bcbd6';
 }
+.knapp{
+  .loggaBS{
+    text-align: center;
+    margin-top: 100px;
+    background-color: white;
+  }
+}
 
+.loggaBS{
+  text-align: center;
+  margin-top: 50px;
+  background-color: grey;
+}
+
+.loggaCal{
+  text-align: center;
+  margin-top: 200px;
+  background-color: grey;
+}
 
 .App-header {
   background-color: #F5F4EE;  /* #282c34 */

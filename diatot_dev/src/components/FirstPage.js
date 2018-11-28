@@ -7,6 +7,8 @@ import blood_drop from './img/blood_drop.png';
 import sensor_icon_50p from './img/sensor_icon_50p.png';
 
 
+
+
 export default class FirstPage extends Component {
   render() {
     return (
