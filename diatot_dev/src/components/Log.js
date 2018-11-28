@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
-import logo from './img/logo.png';
+import logo_bgtrans from './img/logo_bgtrans.png';
 //import FirstPage from "./components/FirstPage";
 
 export default class Log extends Component {
@@ -15,7 +15,7 @@ export default class Log extends Component {
             <Header transparent style={{color: 'white'}}>
               <div class="center">
                 <a href="firstpage">
-                  <img src={logo} height="100" alt="logo"/>
+                  <img src={logo_bgtrans} height="50" alt="logo_bgtrans"/>
                 </a>
               </div>
                   <Navigation>
