@@ -70,13 +70,13 @@ class Log extends Component {
     return (
       <div className="log">
         <h2>{this.props.title}</h2>
-
+            <p>datumstämpel</p>
 
         {/*BS SECTION*/}
         <div className="bsSection">
           <h5>Blood sugar</h5>
           <div className="miniButton">CGM</div>
-          {/* SLOPA DENNA TYCKER JAG */} <div className="miniButton">Blood sugar</div>
+      {/* SLOPA DENNA TYCKER JAG  <div className="miniButton">Blood sugar</div> */}
         <input type="number" step="0.1" placeholder={this.state.bloodSugar} onBlur={this.calcBS}></input>
         <p> mmol/L</p>
       </div>
@@ -92,7 +92,7 @@ class Log extends Component {
           <div className="logContent">
             <p className="underRubrik">Total carbs</p><br></br>
             <div className="carbsContainer">
-          {/*    <DataTable>
+              <table>
                 <tr>
                   <th>Food</th>
                   <th>Weight</th>
@@ -103,9 +103,9 @@ class Log extends Component {
                   <td>60g</td>
                   <td>30g KH</td>
                 </tr>
-              </Table>
-*/}
+              </table>
 
+{/*
               <DataTable
                   shadow={0}
                   rows={[
@@ -117,11 +117,11 @@ class Log extends Component {
                   <TableHeader name="food" tooltip="Type of food">Food</TableHeader>
                   <TableHeader numeric name="weight" tooltip="Weight of food">Weight</TableHeader>
                   <TableHeader numeric name="carbs"  tooltip="Grams of carbs">Carbs</TableHeader>
-                  {/*cellFormatter={(carbs) => `\$${carbs.toFixed(2)}`}*/}
+
               </DataTable>
 
-
-
+*/}
+{/*cellFormatter={(carbs) => `\$${carbs.toFixed(2)}`}*/}
               {/*      <p className="carbsList">Potato, boiled     60g     30g KH
                 GF pasta, boiled    70g     19,6g KH
                 Apple               132g    18,5g KH
@@ -144,7 +144,7 @@ class Log extends Component {
           <p> units</p>
         </div>
 
-        {/*LOG BUTTON*/}
+        {/*SAVE BUTTON*/}
 
         <NavLink to="mainpage" style={{textDecoration: 'none'}}>
           <div className="mainButton" style={{marginTop: '10%'}}>Save</div>
