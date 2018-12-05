@@ -21,12 +21,15 @@ class App extends Component {
               <NavLink to="mainpage" style={{textDecoration: 'none', color: 'white', fontWeight: 'bold'}}>Help</NavLink>
             </Header>
 
-            <Drawer title="Settings">
+            <Drawer title="Menu">
               <Navigation>
-                <a href="/">Settings</a>
-                <a href="/">Your diary</a>
-                <a href="/">Add</a>
-                <a href="Sök">Blood</a>
+                <a href="/">Log book</a>
+                <br></br><br></br><br></br>
+                <p>------Settings------</p>
+                <a href="/">General</a>
+                <a href="/">Insulin</a>
+                <a href="/">Dosing</a>
+                <a href="/">Carbs</a>
               </Navigation>
             </Drawer>
 
