@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+p{
+  margin-bottom: 0 !important;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -187,12 +191,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 .logContent {
   width: 60%;
   display: block;
-  justify-content: space-around;
   align-items: left;
 }
 
@@ -311,6 +316,7 @@ input {
 
 .carbsContainer {
   display: block;
+  margin-bottom: 5%;
   /*
   justify-content: space-between;
   align-items: center;*/
@@ -321,6 +327,19 @@ input {
   text-align: left;
   font-size: 12px;
 
+}
+
+tr th:first-child{
+  text-align: left;
+}
+
+tr td:first-child{
+  text-align: left;
+}
+
+th, td{
+  text-align: right;
+  margin-left: 10%
 }
 
 

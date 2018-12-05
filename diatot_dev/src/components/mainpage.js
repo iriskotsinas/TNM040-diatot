@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
+import { Layout, Content} from 'react-mdl';
 import { NavLink } from 'react-router-dom';
 import './App.css';
 import Users from './users/Users.js';

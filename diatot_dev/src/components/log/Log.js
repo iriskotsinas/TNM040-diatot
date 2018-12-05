@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
-import {DataTable, TableHeader} from 'react-mdl';
 import Mainpage from '../mainpage.js';
 import BSSect from './BSSect.js';
 import exp_arrow from '../img/exp_arrow.png';
+import arrowright from '../img/arrowright.png';
+
 
 class Log extends Component {
   constructor(){
@@ -27,6 +28,7 @@ class Log extends Component {
   /* Set blood sugar */
   calcBS(a){
     let x = Number(a.target.value);
+
 
 
     this.setState({
@@ -92,11 +94,11 @@ class Log extends Component {
         <h5>Carbs</h5>
         <div className="carbsSection">
           <div className="expContent">
-            <img className="arrow" src={exp_arrow} alt="expArrow" />
+            <img className="arrow" src={exp_arrow} alt="ArrowRight" />
           </div>
 
           <div className="logContent">
-            <p className="underRubrik">Total carbs</p><br></br>
+            <p className="underRubrik">Total carbs</p>
             <div className="carbsContainer">
               <table>
                 <tr>
@@ -108,6 +110,16 @@ class Log extends Component {
                   <td>Potato, boiled</td>
                   <td>60g</td>
                   <td>30g KH</td>
+                </tr>
+                <tr>
+                  <td>Banana</td>
+                  <td>80g</td>
+                  <td>45g KH</td>
+                </tr>
+                <tr>
+                  <td>Choclate</td>
+                  <td>120g</td>
+                  <td>79g KH</td>
                 </tr>
               </table>
 
