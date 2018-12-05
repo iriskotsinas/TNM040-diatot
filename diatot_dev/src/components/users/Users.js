@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import User from './User';
-import { Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
 
 class Users extends Component {
   render(){
