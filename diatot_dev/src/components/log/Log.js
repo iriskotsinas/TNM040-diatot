@@ -27,7 +27,6 @@ class Log extends Component {
   /* Set blood sugar */
   calcBS(a){
     let x = Number(a.target.value);
-    let y =
 
 
     this.setState({
@@ -68,18 +67,25 @@ class Log extends Component {
 
   render(){
     return (
-      <div className="log">
-        <h2>{this.props.title}</h2>
+      <div>
+        <h3 className="log">{this.props.title}</h3>
             <p>datumstämpel</p>
 
         {/*BS SECTION*/}
         <div className="bsSection">
           <h5>Blood sugar</h5>
-          <div className="miniButton">CGM</div>
-      {/* SLOPA DENNA TYCKER JAG  <div className="miniButton">Blood sugar</div> */}
-        <input type="number" step="0.1" placeholder={this.state.bloodSugar} onBlur={this.calcBS}></input>
-        <p> mmol/L</p>
-      </div>
+
+           <div className="miniButton">CGM</div>
+
+        <input className="inputSize" type="number" step="0.1" placeholder={this.state.bloodSugar} onBlur={this.calcBS}></input>
+        <span className="textSize">mmol/L</span>
+
+          {/*<div className="valueContent">
+          <input type="number" step="0.1" placeholder={this.state.carbs} onBlur={this.calcCarbs}></input>
+          <p> mmol/L</p>
+        </div>*/}
+
+        </div>
 
       {/*CARBS SECTION*/}
       <div>
@@ -130,18 +136,20 @@ class Log extends Component {
             </div>
 
             <div className="valueContent">
-              <input type="number" step="0.1" placeholder={this.state.carbs} onBlur={this.calcCarbs}></input>
-              <p> grams</p>
-            </div>
+              <input className="inputSize" type="number" step="0.1" placeholder={this.state.carbs} onBlur={this.calcCarbs}></input>
+
+              <span className="textSize">grams</span>
+</div>
           </div>
         </div>
 
 
         {/*INSULIN SECTION*/}
         <div className="insulinSection">
-          <h5>Insulin dose</h5>
-          <input type="number" step="0.1" value={this.state.insulinDose} onBlur={this.calcInsManual}></input>
-          <p> units</p>
+          <h5>Insulin dose</h5><div>
+          <span className="activeInsulin">Active insulin: 0.93</span>  {/*byt ut 0.93 mot variabel activeInsulin*/}
+          <input className="inputSize" type="number" step="0.1" value={this.state.insulinDose} onBlur={this.calcInsManual}></input>
+          <span className="textSize"> units</span></div>
         </div>
 
         {/*SAVE BUTTON*/}

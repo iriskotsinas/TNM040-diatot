@@ -198,13 +198,37 @@ header {
 
 .valueContent {
   width: 30%;
-  display: flex;
+  /*display: flex;*/
   justify-content: space-around;
   align-items: center;
+  /*font-size: 120%;*/
 }
 
+.textSize {
+ font-size: 120%;
+ padding-left: 10px;
+ align-items: right;
+  }
+
+.inputSize {
+  font-size: 22px;
+  text-align: center;
+  align-items: right;
+  margin-bottom: 3%;
+
+  }
+
+  .activeInsulin {
+    font-size: 115%;
+    color: red;
+
+margin-bottom: 20%;
+margin-left: 6%;
+margin-right: 25%;
+    }
+
 .log {
-  margin-top: 50px;
+  margin-top: 10%;
 }
 
 .section {
@@ -222,6 +246,7 @@ header {
   border-top-style: solid;
   border-bottom-style: solid;
   border-color: rgb(210, 210, 210);
+
 }
 
 .carbsSection {
@@ -232,6 +257,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
 }
 
 .insulinSection {
@@ -239,6 +265,7 @@ header {
   width: auto;
   border-bottom-style: solid;
   border-color: rgb(210, 210, 210);
+  margin-bottom: 4%;
 }
 
 .miniButton {
@@ -251,13 +278,15 @@ header {
   width: 100px;
   text-align: center;
   line-height: 200%;
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-left: 12%;
+  margin-right: 30%;
+  margin-bottom: 4%;
   display: inline-block;
   border-style: solid;
   border-width: thin;
   border-color: #77A4BB;
   border-radius: 4px;
+  align-items: left;
   /*box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);*/
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
 }
