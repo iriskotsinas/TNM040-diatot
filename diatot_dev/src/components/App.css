@@ -12,6 +12,11 @@
 header {
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2) !important;
 }
+/*
+.mdl-layout__header-row {
+    padding: 0 !important;
+}
+*/
 
 .center {
   margin: auto;
@@ -99,6 +104,8 @@ header {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
+
 .mainButton:active {
   color: rgba(255, 255, 255, 0.4);
   background-color: #668CA1; /*rgba(136, 187, 214, 0.1);*/
@@ -122,7 +129,7 @@ header {
   padding: 25px 25px;
   background-color: #88bbd6;
   text-align: center;
-  /*line-height: 50%;*/
+  line-height: 50%;
   vertical-align: middle;
   height: 5px;
   width: 73px;
@@ -132,6 +139,10 @@ header {
   display: inline-block;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.CGM{
+  margin: auto;
 }
 
 .smallButton:active {
@@ -161,7 +172,7 @@ header {
 
 .logContent {
   width: 60%;
-  display: flex;
+  display: block;
   justify-content: space-around;
   align-items: left;
 }
@@ -247,12 +258,15 @@ input {
   text-align: left;
   font-size: 16px;
   font-weight: bold;
+  display: block;
 }
 
 .carbsContainer {
-  display: flex;
+  display: block;
+  /*
   justify-content: space-between;
-  align-items: center;
+  align-items: center;*/
+
 }
 
 .carbsList {

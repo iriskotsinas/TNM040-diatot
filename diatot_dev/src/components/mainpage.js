@@ -53,7 +53,7 @@ export default class mainpage extends Component {
               <div className="bloodgraph"> <img className="graph" src={bloodglucose} alt="bloodglucose" /></div>
 
               <NavLink to="newlog" style={{textDecoration: 'none'}}>
-{/* IKON FÖR + */}                <div className="mainButton">+ New log</div>
+{/* IKON FÖR + */}                <div className="mainButton"><div >+ New log</div></div>
               </NavLink>
 
               {/* {this.state.name} */}
@@ -63,7 +63,8 @@ export default class mainpage extends Component {
                 </div>  */}
                 {/*    <Users title="Users List"/>    */}
                 <div className="center">
-                  <div className="smallButton">CGM <img className="sensor_icon" src={this.state.sensorIcon} alt="sensor_icon" /></div>
+                  <div className="smallButton"><div className="CGM">CGM <img className="sensor_icon" src={this.state.sensorIcon} alt="sensor_icon" />
+                 </div></div>
 {/* SLOPA DENNA TYCKER JAG */} <div className="smallButton">BG <img className ="blood_drop" src={blood_drop} alt="blood_drop" /></div>
                 </div>
             </Content>

@@ -92,7 +92,7 @@ class Log extends Component {
           <div className="logContent">
             <p className="underRubrik">Total carbs</p><br></br>
             <div className="carbsContainer">
-          {/*    <DataTable>
+              <table>
                 <tr>
                   <th>Food</th>
                   <th>Weight</th>
@@ -103,8 +103,8 @@ class Log extends Component {
                   <td>60g</td>
                   <td>30g KH</td>
                 </tr>
-              </Table>
-*/}
+              </table>
+
 {/*
               <DataTable
                   shadow={0}
@@ -144,7 +144,7 @@ class Log extends Component {
           <p> units</p>
         </div>
 
-        {/*LOG BUTTON*/}
+        {/*SAVE BUTTON*/}
 
         <NavLink to="mainpage" style={{textDecoration: 'none'}}>
           <div className="mainButton" style={{marginTop: '10%'}}>Save</div>
