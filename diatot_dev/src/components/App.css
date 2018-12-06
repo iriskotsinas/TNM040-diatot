@@ -15,6 +15,8 @@
 
 h5 {
   font-family: 'Source-Sans-Light', sans-serif !important;
+  margin-top: 4% !important;
+  margin-bottom: 0% !important;
   /*font-weight: bold !important;*/
 }
 
@@ -22,8 +24,45 @@ p{
   margin-bottom: 0 !important;
 }
 
+h2 {
+  font-size: 22pt !important;
+  margin: 15px !important;
+  color: #535353 !important;
+}
+
+h1 {
+  font-size: 14pt !important;
+  margin: 15px !important;
+  color: #6C6C6C !important;
+}
+
+.help {
+font-weight: 500;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.app {
+  margin: 0;
+  padding-top: 200;
+  margin-top: 200;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+
+.popup_inner {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  margin: auto;
+  background: white;
+  z-index: 10;
 }
 
 header {
@@ -33,6 +72,12 @@ header {
 .center {
   margin: auto;
   text-align: center;
+}
+
+.center2 {
+  margin: auto;
+  text-align: center;
+  padding-right: 14px;
 }
 
 .content {
@@ -83,20 +128,53 @@ header {
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
 }
 
+a {
+    color: rgb(255, 255, 255) !important;
+    font-size: 16pt;
+}
 
+/*Ändrar storlek på hamburgermenyikonen*/
+.material-icons {
+    font-size: 35px !important;
+    padding-left: 5px !important;
+}
+
+.mdl-layout__header .mdl-layout__drawer-button {
+    margin-top: 10px !important;
+}
+
+.mdl-navigation__link {
+  color: #6C6C6C !important;
+  font-size: 14pt !important;
+}
+
+/*Ändring av "Menu" i menyn*/
+.mdl-layout-title {
+  padding-top: 20px;
+  font-size: 20pt !important;
+  color: #666767 !important;
+}
+
+/*Färg på headern*/
+.mdl-layout {
+  background-color: #7AA3C2;
+}
 
 /************** Main Page ***************/
 .bloodgraph {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .graph {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
   width: 40%;
   height: auto;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2) !important;
+  border-radius: 18px;
+  margin: 0;
 }
 
 .blood_drop {
@@ -125,13 +203,14 @@ header {
   font-weight: bold;
   color: #ffffff;
   padding: 25px 25px;
-  background-color: #88bbd6;  /*5595B0*/
+  background-color: #7AA3C2;  /*ABCAE1 5595B0 88bbd6*/
   text-align: center;
   line-height: 50%;
   height: 10px;
   width: 220px;
   margin: 0 auto;
-  margin-top: 28%;
+  margin-top: 12%;
+  margin-bottom: 5%;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -157,7 +236,7 @@ transition: 0.3s;
   font-size: 12pt;
   color: #ffffff;
   padding: 25px 25px;
-  background-color: #88bbd6;
+  background-color: #7AA3C2; /* ABCAE1 88bbd6*/
   text-align: center;
   line-height: 50%;
   vertical-align: middle;
@@ -165,7 +244,7 @@ transition: 0.3s;
   width: 73px;
   margin-left: 3%;
   margin-right: 3%;
-  margin-top: 25px;
+  margin-top: 5px;
   display: inline-block;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -239,13 +318,13 @@ transition: 0.5s;
 }
 
 .log {
-  margin-top: 12%;
+  margin-top: 2%;
   margin-bottom: 1%;
 }
 
 .date{
   font-size: 12px;
-  margin-bottom: 6%;
+  margin-bottom: 5%;
 }
 
 .sectionhead{
@@ -337,13 +416,13 @@ border-color: rgb(210, 210, 210);
 }
 
 .miniButton {
-  color: rgb(50, 50, 50);
-  background-color: #88bbd6;
+  color: rgb(255, 255, 255);
+  background-color: #7AA3C2;
 /*color: #ffffff;
   background-color: rgb(250,250,250);
   background-color: rgba(147, 185, 211, 0.3);*/
-  font-size: 15px;
-/*  font-weight: bold; */
+  font-size: 16px;
+  font-weight: bold;
   height: 30px;
   width: 100px;
   text-align: center;
@@ -356,7 +435,7 @@ border-color: rgb(210, 210, 210);
   border-width: thin;
   border-color: rgb(209, 209, 209);
 /*  border-color: #77A4BB; */
-  border-radius: 4px;
+  border-radius: 6px;
   align-items: left;
   /*box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);*/
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
@@ -370,7 +449,9 @@ border-color: rgb(210, 210, 210);
 input {
   height: 40px;
   width: 40px;
-  border: 0.5px outset ;
+  border: 0.4px outset ;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4pt;
 }
 
 .underRubrik {
@@ -409,6 +490,53 @@ tr td:first-child{
 th, td{
   text-align: right;
   margin-left: 10%
+}
+
+.cancelButton {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  height: auto;
+  width: 100px;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-top: 55px;
+  margin-bottom: 0 !important;
+  background-color: #9BB9D0;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  padding: 10px;
+  display: inline-block;
+}
+
+/************* Help Page *************/
+
+.textbox {
+  background-color: white;
+  padding: 20px;
+  padding-top: 1px !important;
+  padding-bottom: 5px !important;
+  margin-top: 20px !important;
+  margin: auto;
+  border: 1px;
+  border-radius: 18px;
+  width: 300px;
+  height: auto;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+.backButton {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  height: auto;
+  width: 100px;
+  margin: 18px;
+  margin-top: 55px;
+  background-color: #9BB9D0;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  padding: 10px;
 }
 
 

@@ -3,6 +3,7 @@ import {NavLink} from 'react-router-dom';
 import {DataTable, TableHeader} from 'react-mdl';
 import Mainpage from '../mainpage.js';
 import BSSect from './BSSect.js';
+import kryss from '../img/kryss.png';
 import exp_arrow from '../img/exp_arrow.png';
 
 class Log extends Component {

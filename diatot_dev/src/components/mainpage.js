@@ -8,7 +8,6 @@ import blood_drop from './img/blood_drop.png';
 import sensor_icon_50p from './img/sensor_icon_50p.png';
 import sensor_icon_dark_50p from './img/sensor_icon_dark_50p.png';
 
-
 export default class mainpage extends Component {
   /*
   constructor(props){
@@ -62,9 +61,11 @@ export default class mainpage extends Component {
                 </p>
                 </div>  */}
                 {/*    <Users title="Users List"/>    */}
-                <div className="center">
-                  <div className="smallButton"><div className="CGM">CGM <img className="sensor_icon" src={this.state.sensorIcon} alt="sensor_icon" />
-                 </div></div>
+              <div className="center">
+                <div className="smallButton">
+                  <div className="CGM">CGM <img className="sensor_icon" src={this.state.sensorIcon} alt="sensor_icon" />
+                  </div>
+                </div>
                {/* SLOPA DENNA TYCKER JAG */} <div className="smallButton">Log book</div>
              {/*  <img className ="blood_drop" src={blood_drop} alt="blood_drop" /> */}
               </div>

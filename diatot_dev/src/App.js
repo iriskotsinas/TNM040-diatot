@@ -1,14 +1,40 @@
 import React, { Component } from 'react';
 import {HashRouter, NavLink, Route, BrowserRouter} from 'react-router-dom';
 import Mainpage from "./components/mainpage";
+import Help from "./components/help";
 import Newlog from "./components/newlog";
 import { Layout, Header, Navigation, Drawer } from 'react-mdl';
 import logo from './components/img/logo.png';
-
+import pil2 from './components/img/pil2.png';
 
 /* {window.alert("WARNING: This website is a project under construction and is not a reliable source for calculating your insulin dose. DO NOT USE FOR CALCULATING YOUR INSULIN DOSE");} */
 
 class App extends Component {
+
+  constructor() {
+      super();
+      this.state = {
+        showPopup: false
+      };
+    }
+
+    togglePopup() {
+      this.setState({
+        showPopup: !this.state.showPopup
+      });
+    }
+
+
+      state = { show: false };
+
+      showModal = () => {
+        this.setState({ show: true });
+      };
+
+      hideModal = () => {
+        this.setState({ show: false });
+      };
+
   render() {
     return (
       <HashRouter>
@@ -16,23 +42,33 @@ class App extends Component {
           <Layout fixedHeader>
 
             <Header transparent>  {/* style={{color: 'white'}} */}
-              <div className="center">
+              <div className="center2">
                 <NavLink to="mainpage" style={{textDecoration: 'none'}}>
                   <img className="logoTop" src={logo} height="70" alt="logo"/>
                 </NavLink>
               </div>
-              <NavLink to="mainpage" style={{textDecoration: 'none', color: 'white', fontWeight: 'bold'}}>Help</NavLink>
+              <NavLink to="help" style={{textDecoration: 'none'}}>
+                <div className="help">Help</div>
+              </NavLink>
             </Header>
 
-            <Drawer title="Menu">
+
+            <Drawer title="------Menu------">
               <Navigation>
-                <a href="/">Log book</a>
+                <a href="/mainpage">
+                  <img className="pointer" src={pil2} height="23" alt="pil2"/>   Go to start page</a>
+                <a href="/">
+                  <img className="pointer" src={pil2} height="23" alt="pil2"/>   Log book</a>
                 <br></br><br></br><br></br>
-                <p>------Settings------</p>
-                <a href="/">General</a>
-                <a href="/">Insulin</a>
-                <a href="/">Dosing</a>
-                <a href="/">Carbs</a>
+                <h2>------Settings------</h2>
+                <a href="/">
+                  <img className="pointer" src={pil2} height="23" alt="pil2"/>   General</a>
+                <a href="/">
+                  <img className="pointer" src={pil2} height="23" alt="pil2"/>   Insulin</a>
+                <a href="/">
+                  <img className="pointer" src={pil2} height="23" alt="pil2"/>   Dosing</a>
+                <a href="/">
+                  <img className="pointer" src={pil2} height="23" alt="pil2"/>   Carbs</a>
               </Navigation>
             </Drawer>
 
@@ -52,7 +88,13 @@ class App extends Component {
                     <div className="App">
                       <Mainpage/>
                     </div>
-                  )}/>
+                )}/>
+
+                <Route exact={true} path='/help' render={() => (
+                    <div className="App">
+                      <Help/>
+                    </div>
+                )}/>
 
                 </Layout>
               </div>

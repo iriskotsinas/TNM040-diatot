@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import { Layout, Content} from 'react-mdl';
 import Log from './log/Log.js'
+import kryss from './img/kryss.png';
+import { NavLink } from 'react-router-dom';
 //import FirstPage from "./components/FirstPage";
 
 export default class Newlog extends Component {
@@ -13,9 +15,15 @@ export default class Newlog extends Component {
         <div>
           <Layout fixedHeader>
             <Content className="content">
-              <Log title="New log"/>
-
-
+              <NavLink to="mainpage" style={{textDecoration: 'none'}}>
+                <div className="cancelButton">
+                  <img className="cancel" src={kryss} height="14" alt="kryss"/>   Cancel
+                </div>
+              </NavLink>
+              <NavLink to="newlog" style={{textDecoration: 'none'}}>
+                <div className="cancelButton">Clear</div>
+              </NavLink>
+              <div className="textbox"><Log title="New log"/></div>
             </Content>
           </Layout>
       </div>
