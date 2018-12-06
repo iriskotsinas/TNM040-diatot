@@ -1,8 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Source-Sans');
+/*@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Rubik');*/
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Muli', sans-serif; */
+/* font-family: 'Rubik', sans-serif; */
+/* font-family: 'Roboto', sans-serif; */
 
 /************* General *************/
 .App {
   text-align: center;
+}
+
+h5 {
+  font-family: 'Source-Sans-Light', sans-serif !important;
+  /*font-weight: bold !important;*/
 }
 
 p{
@@ -16,11 +29,6 @@ p{
 header {
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2) !important;
 }
-/*
-.mdl-layout__header-row {
-    padding: 0 !important;
-}
-*/
 
 .center {
   margin: auto;
@@ -28,7 +36,7 @@ header {
 }
 
 .content {
-  background-color: rgb(245,245,246);
+  background-color: rgb(250,250,250);
 }
 
 .hamburger {
@@ -36,6 +44,7 @@ header {
   position: 'relative';
   background: '#9bcbd6';
 }
+
 .knapp{
   .loggaBS{
     text-align: center;
@@ -64,7 +73,7 @@ header {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: white;
 }
@@ -127,8 +136,6 @@ header {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-
 .mainButton:active {
   color: rgba(255, 255, 255, 0.4);
   background-color: #668CA1; /*rgba(136, 187, 214, 0.1);*/
@@ -137,11 +144,11 @@ header {
 
 /*
 .mainButton:hover {
-  background-color: #4d79ff;
-  border: none;
-  color: white;
-  opacity: 0.6;
-  transition: 0.3s;
+background-color: #4d79ff;
+border: none;
+color: white;
+opacity: 0.6;
+transition: 0.3s;
 }*/
 
 .smallButton {
@@ -176,11 +183,11 @@ header {
 
 /*
 .smallButtons:hover {
-  background-color: #4d79ff;
-  border: none;
-  color: white;
-  opacity: 0.6;
-  transition: 0.5s;
+background-color: #4d79ff;
+border: none;
+color: white;
+opacity: 0.6;
+transition: 0.5s;
 } */
 
 
@@ -210,10 +217,10 @@ header {
 }
 
 .textSize {
- font-size: 100%;
- padding-left: 5px;
- align-items: right;
-  }
+  font-size: 100%;
+  padding-left: 5px;
+  align-items: right;
+}
 
 .inputSize {
   font-size: 22px;
@@ -221,64 +228,122 @@ header {
   align-items: right;
   margin-bottom: 3%;
 
-  }
+}
 
-  .activeInsulin {
-    font-size: 115%;
-    color: red;
-    margin-bottom: 20%;
-    margin-left: 6%;
-    margin-right: 28%;
-    }
+.activeInsulin {
+  font-size: 115%;
+  color: red;
+  margin-bottom: 20%;
+  margin-left: 6%;
+  margin-right: 28%;
+}
 
 .log {
-  margin-top: 10%;
-  font-family: Tahoma, Geneva, sans-serif;
+  margin-top: 12%;
+  margin-bottom: 1%;
 }
 
-.section {
-  background-color: rgb(245, 245, 246);
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
-  /*box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);*/
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-color: rgb(210, 210, 210);
+.date{
+  font-size: 12px;
+  margin-bottom: 6%;
 }
+
+.sectionhead{
+  /*font-weight: bold;*/
+  font-size: 20px;
+}
+
+/*
+.section {
+background-color: rgb(245, 245, 246);
+box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+border-top-style: solid;
+border-bottom-style: solid;
+border-color: rgb(210, 210, 210);
+}
+*/
+
 
 .bsSection {
-  height: auto;
-  width: auto;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-color: rgb(210, 210, 210);
+    width: auto;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
 
+.bsSection::before {
+  content : "";
+  position: absolute;
+  left    : 5%;
+  top  : -15%;
+  width   : 90%;
+  border-top-style: solid;
+  border-width: thin;
+  border-color: rgb(190, 190, 190);
+}
+
+.bsSection::after {
+  content : "";
+  position: absolute;
+  left    : 5%;
+  bottom  : -10%;
+  width   : 90%;
+  border-bottom-style: solid;
+  border-width: thin;
+  border-color: rgb(190, 190, 190);
 }
 
 .carbsSection {
   height: auto;
   width: auto;
-  border-bottom-style: solid;
-  border-color: rgb(210, 210, 210);
+  width: auto;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  font-family: 'Source-Sans', sans-serif;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
 
+.carbsSection::after {
+  content : "";
+  position: absolute;
+  left    : 5%;
+  bottom  : 0%;
+  width   : 90%;
+  border-bottom-style: solid;
+  border-width: thin;
+  border-color: rgb(190, 190, 190);
 }
 
 .insulinSection {
   height: auto;
   width: auto;
-  border-bottom-style: solid;
-  border-color: rgb(210, 210, 210);
+  position: relative;
+  z-index: 1;
   margin-bottom: 4%;
 }
 
+.insulinSection::after {
+  content : "";
+  position: absolute;
+  left    : 5%;
+  bottom  : -5%;
+  width   : 90%;
+  border-bottom-style: solid;
+  border-width: thin;
+  border-color: rgb(190, 190, 190);
+}
+
 .miniButton {
-  color: #ffffff;
+  color: rgb(50, 50, 50);
   background-color: #88bbd6;
-  /*background-color: rgba(147, 185, 211, 0.3);*/
+/*color: #ffffff;
+  background-color: rgb(250,250,250);
+  background-color: rgba(147, 185, 211, 0.3);*/
   font-size: 15px;
-  font-weight: bold;
+/*  font-weight: bold; */
   height: 30px;
   width: 100px;
   text-align: center;
@@ -289,11 +354,12 @@ header {
   display: inline-block;
   border-style: solid;
   border-width: thin;
-  border-color: #77A4BB;
+  border-color: rgb(209, 209, 209);
+/*  border-color: #77A4BB; */
   border-radius: 4px;
   align-items: left;
   /*box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);*/
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 .miniButton:active {
@@ -317,17 +383,19 @@ input {
 .carbsContainer {
   display: block;
   margin-bottom: 5%;
-
   /*
   justify-content: space-between;
   align-items: center;*/
-
 }
 
 .carbsList {
   text-align: left;
   font-size: 12px;
 
+}
+
+table{
+    font-size: 12px;
 }
 
 tr th:first-child{

@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import {NavLink, Route, BrowserRouter} from 'react-router-dom';
+import {HashRouter, NavLink, Route, BrowserRouter} from 'react-router-dom';
 import Mainpage from "./components/mainpage";
 import Newlog from "./components/newlog";
 import { Layout, Header, Navigation, Drawer } from 'react-mdl';
 import logo from './components/img/logo.png';
 
+
+/* {window.alert("WARNING: This website is a project under construction and is not a reliable source for calculating your insulin dose. DO NOT USE FOR CALCULATING YOUR INSULIN DOSE");} */
+
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div>
           <Layout fixedHeader>
 
-            <Header className="topBar" transparent style={{color: 'white'}}>
+            <Header transparent>  {/* style={{color: 'white'}} */}
               <div className="center">
                 <NavLink to="mainpage" style={{textDecoration: 'none'}}>
                   <img className="logoTop" src={logo} height="70" alt="logo"/>
@@ -53,7 +56,7 @@ class App extends Component {
 
                 </Layout>
               </div>
-            </BrowserRouter>
+            </HashRouter>
           );
         }
       }

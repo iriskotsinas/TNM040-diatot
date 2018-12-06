@@ -12,7 +12,7 @@ export default class Newlog extends Component {
     {/*var Media = require("react-media");*/}
         <div>
           <Layout fixedHeader>
-            <Content style={{backgroundColor: "rgb(245,245,246)"}}>
+            <Content className="content">
               <Log title="New log"/>
 
 
