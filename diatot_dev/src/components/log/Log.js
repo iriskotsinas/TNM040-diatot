@@ -123,6 +123,7 @@ class Log extends Component {
                 </tr>
               </table>
 
+
 {/*
               <DataTable
                   shadow={0}
