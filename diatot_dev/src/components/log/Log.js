@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
+import {DataTable, TableHeader} from 'react-mdl';
 import Mainpage from '../mainpage.js';
 import BSSect from './BSSect.js';
 import exp_arrow from '../img/exp_arrow.png';
-import arrowright from '../img/arrowright.png';
-
 
 class Log extends Component {
   constructor(){
@@ -28,7 +27,6 @@ class Log extends Component {
   /* Set blood sugar */
   calcBS(a){
     let x = Number(a.target.value);
-
 
 
     this.setState({
@@ -94,11 +92,11 @@ class Log extends Component {
         <h5>Carbs</h5>
         <div className="carbsSection">
           <div className="expContent">
-            <img className="arrow" src={exp_arrow} alt="ArrowRight" />
+            <img className="arrow" src={exp_arrow} alt="expArrow" />
           </div>
 
           <div className="logContent">
-            <p className="underRubrik">Total carbs</p>
+            <p className="underRubrik">Total carbs</p><br></br>
             <div className="carbsContainer">
               <table>
                 <tr>
@@ -111,35 +109,9 @@ class Log extends Component {
                   <td>60g</td>
                   <td>30g KH</td>
                 </tr>
-                <tr>
-                  <td>Banana</td>
-                  <td>80g</td>
-                  <td>45g KH</td>
-                </tr>
-                <tr>
-                  <td>Choclate</td>
-                  <td>120g</td>
-                  <td>79g KH</td>
-                </tr>
               </table>
 
 
-{/*
-              <DataTable
-                  shadow={0}
-                  rows={[
-                      {food: 'Potato, boiled', weight: 60, carbs: 30},
-                      {food: 'GF pasta, boiled', weight: 70, carbs: 19.6},
-                      {food: 'Apple', weight: 132, carbs: 18.5}
-                  ]}
-              >
-                  <TableHeader name="food" tooltip="Type of food">Food</TableHeader>
-                  <TableHeader numeric name="weight" tooltip="Weight of food">Weight</TableHeader>
-                  <TableHeader numeric name="carbs"  tooltip="Grams of carbs">Carbs</TableHeader>
-
-              </DataTable>
-
-*/}
 {/*cellFormatter={(carbs) => `\$${carbs.toFixed(2)}`}*/}
               {/*      <p className="carbsList">Potato, boiled     60g     30g KH
                 GF pasta, boiled    70g     19,6g KH
@@ -161,6 +133,7 @@ class Log extends Component {
         <div className="insulinSection">
           <h5>Insulin dose</h5><div>
           <span className="activeInsulin">Active insulin: 0.93</span>  {/*byt ut 0.93 mot variabel activeInsulin*/}
+
           <input className="inputSize" type="number" step="0.1" value={this.state.insulinDose} onBlur={this.calcInsManual}></input>
           <span className="textSize"> units</span></div>
         </div>
