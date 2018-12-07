@@ -2,28 +2,12 @@ import React, { Component } from 'react';
 import { Layout, Content} from 'react-mdl';
 import { NavLink } from 'react-router-dom';
 import './App.css';
-import Users from './users/Users.js';
 import bloodglucose from './img/bloodglucose.png';
-import blood_drop from './img/blood_drop.png';
+/* import blood_drop from './img/blood_drop.png'; */
 import sensor_icon_50p from './img/sensor_icon_50p.png';
 import sensor_icon_dark_50p from './img/sensor_icon_dark_50p.png';
 
 export default class mainpage extends Component {
-  /*
-  constructor(props){
-  super(props);
-  this.state = {
-  name: "Ola"
-  };
-  this.calculate = this.calculate.bind(this);
-  }
-
-  calculate(){
-  console.log("Hej");
-  this.setState({name:"Jacob"});
-  }
-  */
-
   constructor(){
     super();
     this.state = {
@@ -34,7 +18,6 @@ export default class mainpage extends Component {
   }
 
   sensorDark(){
-
     this.setState({
       sensorIcon: sensor_icon_dark_50p
     })

@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
-import {DataTable, TableHeader} from 'react-mdl';
-import Mainpage from '../mainpage.js';
-import BSSect from './BSSect.js';
 import Collapsible from 'react-collapsible';
-import kryss from '../img/kryss.png';
-import exp_arrow from '../img/exp_arrow.png';
+import arrow from '../img/arrow.svg';
 import down2 from '../img/down2.png';
-
 
 class Log extends Component {
   constructor(props){
@@ -20,7 +15,9 @@ class Log extends Component {
       carbRatio: 11.50,  /* 11.50 */
       corrRatio: 4.30, /*4.30*/
       bgTarget: 6.0,
-      sero: 0.0,
+      activeInsulin: 0.93,
+      activeInsulinTime: 4.0,
+      zero: 0.0,
       date: new Date()
     };
 
@@ -37,7 +34,8 @@ class Log extends Component {
 
     this.setState({
       bloodSugar: x,
-      insulinDose: this.calcInsulin(x, this.state.carbs)
+      insulinDose: this.calcInsulin(x, this.state.carbs),
+      activeInsulin: this.calcActiveInsulin()
     })
   }
 
@@ -47,7 +45,8 @@ class Log extends Component {
 
     this.setState({
       carbs: x,
-      insulinDose: this.calcInsulin(x, this.state.bloodSugar)
+      insulinDose: this.calcInsulin(x, this.state.bloodSugar),
+      activeInsulin: this.calcActiveInsulin()
     })
   }
 
@@ -64,7 +63,19 @@ class Log extends Component {
       corrDose = bs / this.state.corrRatio;
     }
 
-    return carbDose + corrDose;
+    return carbDose + corrDose - this.state.activeInsulin;
+  }
+
+  /* MÅSTE JUSTERAS FÖR ATT MINSKA AKTIVT INSULIN I FÖRHÅLLANDE TILL TIDEN */
+  calcActiveInsulin(){
+    let actInsSpeed =  this.state.insulinDose / this.state.activeInsulinTime;
+    let actIns = this.state.activeInsulin - this.state.activeInsulin * actInsSpeed;
+
+    if (actIns <= 0) {
+      return 0.0;
+    } else {
+      return actIns
+    }
   }
 
   /* Set carbs */
@@ -98,18 +109,20 @@ class Log extends Component {
     )
   }
 
+
   rotateImage(){
     let classname;
 
-    if (this.state.arrowClass === 'arrow'){
+    if (this.state.arrowClass === 'arrow') {
       classname = 'arrowRot'
-    } else if(this.state.arrowClass === 'arrowRot'){
+    } else if (this.state.arrowClass === 'arrowRot') {
       classname = 'arrow'
     }
 
     this.setState({
       arrowClass: classname
     })
+
   }
 
   render(){
@@ -132,12 +145,11 @@ class Log extends Component {
         <div>
           <h5 className="sectionhead">Carbs</h5>
           <div className="carbsSection">
-
             <div className="logContent">
               {/*Expand function*/}
               <Collapsible trigger=
                 <div className="expandDiv">
-                  <img className={this.state.arrowClass} src={down2} height="40" alt="ArrowRight" onClick={this.rotateImage} />
+                  <img className={this.state.arrowClass} src={arrow} height="40" alt="arrow" onClick={this.rotateImage}/>
                   <p className="underRubrik">Total carbs</p>
                 </div>>
               <div className="carbsContainer">
@@ -164,24 +176,27 @@ class Log extends Component {
                   </tr>
                 </table>
               </div>
-              </Collapsible>
+            </Collapsible>
             </div>
             <div className="valueContent">
               <input className="inputSize" type="number" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number" step="0.1" placeholder={this.state.carbs} onBlur={this.calcCarbs}></input>
               <span className="textSize">grams</span>
             </div>
-
           </div>
-        </div>
 
+        </div>
 
         {/*INSULIN SECTION*/}
         <div className="insulinSection">
-          <h5>Insulin dose</h5><div>
-          <span className="activeInsulin">Active insulin: 0.93</span>  {/*byt ut 0.93 mot variabel activeInsulin*/}
-          <input className="inputSize" type="number" step="0.1" value={this.state.insulinDose} onBlur={this.calcInsManual}></input>
-          <span className="textSize"> units</span></div>
-        </div>
+          <h5>Insulin dose</h5>
+          <div className="insulinContent">
+            <div className="actInsDiv"><span>Active insulin: 0.93</span></div>  {/*byt ut 0.93 mot variabel activeInsulin*/}
+            <div className="insulinDose">
+              <input className="inputSize" type="number" step="0.1" value={this.state.insulinDose} onBlur={this.calcInsManual}></input>
+              <span className="textSize"> units</span>
+            </div>
+          </div>
+            </div>
 
 
             {/*SAVE BUTTON*/}

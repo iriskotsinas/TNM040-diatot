@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {HashRouter, NavLink, Route, BrowserRouter} from 'react-router-dom';
+import {HashRouter, NavLink, Route} from 'react-router-dom';
 import Mainpage from "./components/mainpage";
 import Help from "./components/help";
 import Newlog from "./components/newlog";

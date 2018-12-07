@@ -37,7 +37,7 @@ h1 {
 }
 
 .help {
-font-weight: 500;
+  font-weight: 500;
 }
 
 .App-link {
@@ -81,7 +81,7 @@ header {
 }
 
 .content {
-  background-color: rgb(250,250,250);
+  background-color: rgb(245,245,245);
 }
 
 .hamburger {
@@ -290,6 +290,8 @@ transition: 0.5s;
 .valueContent {
   width: 30%;
   /*display: flex;*/
+  padding-right: 3.5%;
+  padding-bottom: 1%;
   justify-content: space-around;
   align-items: center;
 
@@ -307,15 +309,24 @@ transition: 0.5s;
   text-align: center;
   align-items: right;
   margin-bottom: 3%;
-
 }
 
 .activeInsulin {
-  font-size: 115%;
-  color: red;
-  margin-bottom: 20%;
+
   margin-left: 6%;
   margin-right: 28%;
+}
+
+.actInsDiv {
+  text-align: left;
+  font-size: 90%;
+  color: red;
+  margin-top: 7%;
+  margin-left: 5%;
+}
+
+.insulinDose {
+
 }
 
 .log {
@@ -354,9 +365,9 @@ border-color: rgb(210, 210, 210);
 .bsSection::before {
   content : "";
   position: absolute;
-  left    : 5%;
+  left    : 0%;
   top  : -15%;
-  width   : 90%;
+  width   : 100%;
   border-top-style: solid;
   border-width: thin;
   border-color: rgb(190, 190, 190);
@@ -365,9 +376,9 @@ border-color: rgb(210, 210, 210);
 .bsSection::after {
   content : "";
   position: absolute;
-  left    : 5%;
+  left    : 0%;
   bottom  : -10%;
-  width   : 90%;
+  width   : 100%;
   border-bottom-style: solid;
   border-width: thin;
   border-color: rgb(190, 190, 190);
@@ -376,8 +387,6 @@ border-color: rgb(210, 210, 210);
 .carbsSection {
   height: auto;
   width: auto;
-  width: auto;
-  height: auto;
   position: relative;
   z-index: 1;
   font-family: 'Source-Sans', sans-serif;
@@ -389,9 +398,9 @@ border-color: rgb(210, 210, 210);
 .carbsSection::after {
   content : "";
   position: absolute;
-  left    : 5%;
+  left    : 0%;
   bottom  : 0%;
-  width   : 90%;
+  width   : 100%;
   border-bottom-style: solid;
   border-width: thin;
   border-color: rgb(190, 190, 190);
@@ -408,12 +417,17 @@ border-color: rgb(210, 210, 210);
 .insulinSection::after {
   content : "";
   position: absolute;
-  left    : 5%;
+  left    : 0%;
   bottom  : -5%;
-  width   : 90%;
+  width   : 100%;
   border-bottom-style: solid;
   border-width: thin;
   border-color: rgb(190, 190, 190);
+}
+
+.insulinContent {
+  display: flex;
+  justify-content: space-between;
 }
 
 .miniButton {
@@ -461,8 +475,7 @@ input {
   font-size: 16px;
   font-weight: bold;
   display: block;
-  padding-top: 4%;
-
+  padding-top: 0%;
 }
 
 .carbsContainer {
@@ -534,25 +547,47 @@ th, td{
 }
 
 .arrow {
+  height: 22px;
+  width: auto;
+  /*padding-top: 10px;*/
+  text-align: left;
+  display: block;
+  float: left;
+  /*-webkit-transform: rotate(-90deg);*/
+  transition: 0.25s;
+}
+
+.arrowRot {
+  /*
+  -webkit-transform: rotate(0deg);
+  text-align: left;
+  display: block;
   float:left;
+  */
+
+
+  /*
+    padding-top: 1px;
+    margin-left: -80%;
+    height: 22px;
+    width: auto;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transition: 0.25s; */
+
+  height: 22px;
+  width: auto;
+  -webkit-transform: rotate(90deg);
+  float: left;
   display: block;
   text-align: left;
-  -webkit-transform: rotate(-90deg);
+  /*-webkit-transform: rotate(0deg);*/
   transition: 0.25s;
 }
 
 .expandDiv{
   padding-bottom: 8%;
 }
-
-.arrowRot {
-  float:left;
-  display: block;
-  text-align: left;
-  -webkit-transform: rotate(0deg);
-  transition: 0.25s;
-}
-
 
 .cancel {
   margin-bottom: 3.2%;
