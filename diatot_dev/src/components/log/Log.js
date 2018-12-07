@@ -13,6 +13,7 @@ class Log extends Component {
   constructor(props){
     super(props);
     this.state = {
+      arrowClass: 'arrow',
       bloodSugar: 0.0,
       carbs: 0.0,
       insulinDose: 0.0,
@@ -23,6 +24,7 @@ class Log extends Component {
       date: new Date()
     };
 
+    this.rotateImage = this.rotateImage.bind(this);
     this.calcBS = this.calcBS.bind(this);
     this.calcCarbs = this.calcCarbs.bind(this);
     this.calcInsulin = this.calcInsulin.bind(this);
@@ -96,6 +98,20 @@ class Log extends Component {
     )
   }
 
+  rotateImage(){
+    let classname;
+
+    if (this.state.arrowClass === 'arrow'){
+      classname = 'arrowRot'
+    } else if(this.state.arrowClass === 'arrowRot'){
+      classname = 'arrow'
+    }
+
+    this.setState({
+      arrowClass: classname
+    })
+  }
+
   render(){
     return (
       <div>
@@ -118,8 +134,12 @@ class Log extends Component {
           <div className="carbsSection">
 
             <div className="logContent">
-              <p className="underRubrik">Total carbs</p>
-              <Collapsible trigger= <img className="arrow" src={down2} height="40" alt="ArrowRight" />>
+              {/*Expand function*/}
+              <Collapsible trigger=
+                <div className="expandDiv">
+                  <img className={this.state.arrowClass} src={down2} height="40" alt="ArrowRight" onClick={this.rotateImage} />
+                  <p className="underRubrik">Total carbs</p>
+                </div>>
               <div className="carbsContainer">
                 <table>
                   <tr>

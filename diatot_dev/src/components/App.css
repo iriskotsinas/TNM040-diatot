@@ -292,6 +292,7 @@ transition: 0.5s;
   /*display: flex;*/
   justify-content: space-around;
   align-items: center;
+
   /*font-size: 120%;*/
 }
 
@@ -460,12 +461,15 @@ input {
   font-size: 16px;
   font-weight: bold;
   display: block;
+  padding-top: 4%;
+
 }
 
 .carbsContainer {
   display: block;
   margin-bottom: 5%;
   text-align: center;
+  margin-left: 8%;
   /*
   justify-content: space-between;
   align-items: center;*/
@@ -530,9 +534,25 @@ th, td{
 }
 
 .arrow {
+  float:left;
+  display: block;
   text-align: left;
   -webkit-transform: rotate(-90deg);
+  transition: 0.25s;
 }
+
+.expandDiv{
+  padding-bottom: 8%;
+}
+
+.arrowRot {
+  float:left;
+  display: block;
+  text-align: left;
+  -webkit-transform: rotate(0deg);
+  transition: 0.25s;
+}
+
 
 .cancel {
   margin-bottom: 3.2%;
