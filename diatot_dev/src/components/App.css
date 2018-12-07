@@ -494,16 +494,16 @@ th, td{
 
 .cancelButton {
   font-size: 14px;
-  color: #557D9C;
-  font-weight: bold;
+  color: #043357;
+  /*font-weight: bold;*/
   height: auto;
   width: 80px;
   margin-left: 0;
-  margin-right: 94px;
+  margin-right: 93px;
   margin-top: 8px;
   margin-bottom: 0 !important;
   background-color: white;
-  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   border-radius: 7px;
   padding: 2px;
   display: inline-block;
@@ -511,16 +511,16 @@ th, td{
 
 .clearButton {
   font-size: 14px;
-  color: #557D9C;
-  font-weight: bold;
+  color: #043357;
+  /*font-weight: bold;*/
   height: auto;
   width: 80px;
-  margin-left: 94px;
+  margin-left: 93px;
   margin-right: 0;
   margin-top: 12px;
   margin-bottom: 0 !important;
   background-color: white;
-  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   border-radius: 7px;
   padding: 2px;
   display: inline-block;
@@ -530,6 +530,10 @@ th, td{
   margin-bottom: 320%;
   margin-left: 20%;
   -webkit-transform: rotate(-90deg);
+}
+
+.cancel {
+  margin-bottom: 3.2%;
 }
 
 /************* Help Page *************/

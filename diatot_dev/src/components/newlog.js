@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Layout, Content} from 'react-mdl';
 import Log from './log/Log.js'
-import kryss from './img/kryss.png';
+import cross from './img/cross.png';
 import { NavLink } from 'react-router-dom';
 //import FirstPage from "./components/FirstPage";
 
@@ -17,7 +17,7 @@ export default class Newlog extends Component {
             <Content className="content">
               <NavLink to="mainpage" style={{textDecoration: 'none'}}>
                 <div className="cancelButton">
-                  <img className="cancel" src={kryss} height="10" alt="kryss"/>   Cancel
+                  <img className="cancel" src={cross} height="15" alt="cross"/>  Cancel
                 </div>
               </NavLink>
               <NavLink to="newlog" style={{textDecoration: 'none'}}>
