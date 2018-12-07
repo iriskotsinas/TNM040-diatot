@@ -5,6 +5,7 @@ import Mainpage from '../mainpage.js';
 import BSSect from './BSSect.js';
 import kryss from '../img/kryss.png';
 import exp_arrow from '../img/exp_arrow.png';
+import down2 from '../img/down2.png';
 
 class Log extends Component {
   constructor(props){
@@ -114,7 +115,7 @@ class Log extends Component {
           <h5 className="sectionhead">Carbs</h5>
           <div className="carbsSection">
             <div className="expContent">
-              <img className="arrow" src={exp_arrow} alt="ArrowRight" />
+              <img className="arrow" src={down2} height="40" alt="ArrowRight" />
             </div>
             <div className="logContent">
               <p className="underRubrik">Total carbs</p>

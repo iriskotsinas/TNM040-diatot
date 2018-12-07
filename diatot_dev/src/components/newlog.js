@@ -17,11 +17,11 @@ export default class Newlog extends Component {
             <Content className="content">
               <NavLink to="mainpage" style={{textDecoration: 'none'}}>
                 <div className="cancelButton">
-                  <img className="cancel" src={kryss} height="14" alt="kryss"/>   Cancel
+                  <img className="cancel" src={kryss} height="10" alt="kryss"/>   Cancel
                 </div>
               </NavLink>
               <NavLink to="newlog" style={{textDecoration: 'none'}}>
-                <div className="cancelButton">Clear</div>
+                <div className="clearButton">Clear</div>
               </NavLink>
               <div className="textbox"><Log title="New log"/></div>
             </Content>

@@ -15,7 +15,7 @@
 
 h5 {
   font-family: 'Source-Sans-Light', sans-serif !important;
-  margin-top: 4% !important;
+  margin-top: 6% !important;
   margin-bottom: 0% !important;
   /*font-weight: bold !important;*/
 }
@@ -493,20 +493,43 @@ th, td{
 }
 
 .cancelButton {
-  font-size: 18px;
-  color: white;
+  font-size: 14px;
+  color: #557D9C;
   font-weight: bold;
   height: auto;
-  width: 100px;
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-top: 55px;
+  width: 80px;
+  margin-left: 0;
+  margin-right: 94px;
+  margin-top: 8px;
   margin-bottom: 0 !important;
-  background-color: #9BB9D0;
-  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
   border-radius: 7px;
-  padding: 10px;
+  padding: 2px;
   display: inline-block;
+}
+
+.clearButton {
+  font-size: 14px;
+  color: #557D9C;
+  font-weight: bold;
+  height: auto;
+  width: 80px;
+  margin-left: 94px;
+  margin-right: 0;
+  margin-top: 12px;
+  margin-bottom: 0 !important;
+  background-color: white;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+  padding: 2px;
+  display: inline-block;
+}
+
+.arrow {
+  margin-bottom: 320%;
+  margin-left: 20%;
+  -webkit-transform: rotate(-90deg);
 }
 
 /************* Help Page *************/
@@ -516,11 +539,11 @@ th, td{
   padding: 20px;
   padding-top: 1px !important;
   padding-bottom: 5px !important;
-  margin-top: 20px !important;
+  margin-top: 13px !important;
   margin: auto;
   border: 1px;
   border-radius: 18px;
-  width: 300px;
+  width: 315px;
   height: auto;
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2) !important;
 }
