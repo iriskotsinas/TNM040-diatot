@@ -282,7 +282,7 @@ transition: 0.5s;
 }
 
 .logContent {
-  width: 60%;
+  width: 500%;
   display: block;
   align-items: left;
 }
@@ -455,6 +455,7 @@ input {
 }
 
 .underRubrik {
+  margin-left: 20%;
   text-align: left;
   font-size: 16px;
   font-weight: bold;
@@ -464,6 +465,7 @@ input {
 .carbsContainer {
   display: block;
   margin-bottom: 5%;
+  text-align: center;
   /*
   justify-content: space-between;
   align-items: center;*/
@@ -471,12 +473,13 @@ input {
 
 .carbsList {
   text-align: left;
-  font-size: 12px;
+  font-size: 12px !important;
 
 }
 
 table{
     font-size: 12px;
+    border-spacing: 0.1px ;
 }
 
 tr th:first-child{
@@ -527,8 +530,7 @@ th, td{
 }
 
 .arrow {
-  margin-bottom: 320%;
-  margin-left: 20%;
+  text-align: left;
   -webkit-transform: rotate(-90deg);
 }
 

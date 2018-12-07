@@ -3,9 +3,11 @@ import {NavLink} from 'react-router-dom';
 import {DataTable, TableHeader} from 'react-mdl';
 import Mainpage from '../mainpage.js';
 import BSSect from './BSSect.js';
+import Collapsible from 'react-collapsible';
 import kryss from '../img/kryss.png';
 import exp_arrow from '../img/exp_arrow.png';
 import down2 from '../img/down2.png';
+
 
 class Log extends Component {
   constructor(props){
@@ -114,11 +116,10 @@ class Log extends Component {
         <div>
           <h5 className="sectionhead">Carbs</h5>
           <div className="carbsSection">
-            <div className="expContent">
-              <img className="arrow" src={down2} height="40" alt="ArrowRight" />
-            </div>
+
             <div className="logContent">
               <p className="underRubrik">Total carbs</p>
+              <Collapsible trigger= <img className="arrow" src={down2} height="40" alt="ArrowRight" />>
               <div className="carbsContainer">
                 <table>
                   <tr>
@@ -143,11 +144,13 @@ class Log extends Component {
                   </tr>
                 </table>
               </div>
+              </Collapsible>
             </div>
             <div className="valueContent">
               <input className="inputSize" type="number" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number" step="0.1" placeholder={this.state.carbs} onBlur={this.calcCarbs}></input>
               <span className="textSize">grams</span>
             </div>
+
           </div>
         </div>
 

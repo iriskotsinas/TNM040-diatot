@@ -9,6 +9,7 @@
     "react": "^16.6.1",
     "react-button-component": "^1.0.0",
     "react-collapse": "^4.0.3",
+    "react-collapsible": "^2.3.2",
     "react-dom": "^16.6.1",
     "react-expand-collapse": "^0.2.0",
     "react-mdl": "^1.11.0",
