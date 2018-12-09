@@ -138,7 +138,7 @@ class Log extends Component {
               <Collapsible trigger=
                 <div className="expandDiv">
                   <img className={this.state.arrowClass} src={down2} height="40" alt="ArrowRight" onClick={this.rotateImage} />
-                  <p className="underRubrik">Total carbs</p>
+                  <p className="underRubrik" onClick={this.rotateImage}>Total carbs </p>
                 </div>>
               <div className="carbsContainer">
                 <table>
