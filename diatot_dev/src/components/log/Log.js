@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
 import Collapsible from 'react-collapsible';
 import arrow from '../img/arrow.svg';
-import down2 from '../img/down2.png';
+/*import down2 from '../img/down2.png';*/
 
 
 class ActiveIns {
