@@ -6,6 +6,8 @@ import cross from './img/cross.png';
 import { NavLink } from 'react-router-dom';
 //import FirstPage from "./components/FirstPage";
 
+
+
 export default class Newlog extends Component {
   render() {
     return (
@@ -15,15 +17,17 @@ export default class Newlog extends Component {
         <div>
           <Layout fixedHeader>
             <Content className="content">
-              <NavLink to="mainpage" style={{textDecoration: 'none'}}>
-                <div className="cancelButton">
-                  <img className="cancel" src={cross} height="15" alt="cross"/>  Cancel
-                </div>
-              </NavLink>
-              <NavLink to="newlog" style={{textDecoration: 'none'}}>
-                <div className="clearButton">Clear</div>
-              </NavLink>
-              <div className="textbox"><Log title="New log"/></div>
+              <div className="textbox">
+               <NavLink to="mainpage" style={{textDecoration: 'none'}}>
+                 <div className="cancelButton">
+                   <img className="cancel" src={cross} height="15" alt="cross"/>  Cancel
+                 </div>
+               </NavLink>
+               <NavLink to="newlog" style={{textDecoration: 'none'}}>
+                 <div className="clearButton" onClick={this.clearAll}>Clear</div>
+               </NavLink>
+                <Log title="New log"/>
+              </div>
             </Content>
           </Layout>
       </div>

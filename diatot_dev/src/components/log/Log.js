@@ -24,6 +24,7 @@ class Log extends Component {
       date: new Date()
     };
 
+    this.clearAll = this.clearAll.bind(this);
     this.rotateImage = this.rotateImage.bind(this);
     this.calcBS = this.calcBS.bind(this);
     this.calcCarbs = this.calcCarbs.bind(this);
@@ -112,6 +113,11 @@ class Log extends Component {
     })
   }
 
+  clearAll(){
+
+  };
+
+
   render(){
     return (
       <div>
@@ -123,7 +129,7 @@ class Log extends Component {
         {/*BS SECTION*/}
         <div className="bsSection">
           <h5 className="sectionhead">Blood sugar</h5>
-          <div className="miniButton">CGM</div>
+          <div className="miniButton"  onClick={this.clearAll}>CGM</div>
           <input className="inputSize" type="number" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number" step="0.1" placeholder={this.state.bloodSugar} onBlur={this.calcBS}></input>
           <span className="textSize">mmol/L</span>
         </div>
@@ -168,7 +174,7 @@ class Log extends Component {
             </div>
             <div className="valueContent">
               <input className="inputSize" type="number" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number" step="0.1" placeholder={this.state.carbs} onBlur={this.calcCarbs}></input>
-              <span className="textSize">grams</span>
+              <span className="textSize1">grams</span>
             </div>
 
           </div>
@@ -178,9 +184,11 @@ class Log extends Component {
         {/*INSULIN SECTION*/}
         <div className="insulinSection">
           <h5>Insulin dose</h5><div>
-          <span className="activeInsulin">Active insulin: 0.93</span>  {/*byt ut 0.93 mot variabel activeInsulin*/}
-          <input className="inputSize" type="number" step="0.1" value={this.state.insulinDose} onBlur={this.calcInsManual}></input>
-          <span className="textSize"> units</span></div>
+
+          <input className="inputSize1" type="number" step="0.1" value={this.state.insulinDose} onBlur={this.calcInsManual}></input>
+          <div className="textSize"> units</div>
+          <div className="activeInsulin">Active insulin: 0.93</div>  {/*byt ut 0.93 mot variabel activeInsulin*/}
+          </div>
         </div>
 
 
