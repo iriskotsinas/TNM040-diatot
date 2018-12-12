@@ -21,6 +21,7 @@ class Log extends Component {
       date: new Date()
     };
 
+    this.clearAll = this.clearAll.bind(this);
     this.rotateImage = this.rotateImage.bind(this);
     this.calcBS = this.calcBS.bind(this);
     this.calcCarbs = this.calcCarbs.bind(this);
@@ -125,6 +126,11 @@ class Log extends Component {
 
   }
 
+  clearAll(){
+
+  };
+
+
   render(){
     return (
       <div>
@@ -136,7 +142,7 @@ class Log extends Component {
         {/*BS SECTION*/}
         <div className="bsSection">
           <h5 className="sectionhead">Blood sugar</h5>
-          <div className="miniButton">CGM</div>
+          <div className="miniButton"  onClick={this.clearAll}>CGM</div>
           <input className="inputSize" type="number" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number" step="0.1" placeholder={this.state.bloodSugar} onBlur={this.calcBS}></input>
           <span className="textSize">mmol/L</span>
         </div>
@@ -150,7 +156,7 @@ class Log extends Component {
               <Collapsible trigger=
                 <div className="expandDiv">
                   <img className={this.state.arrowClass} src={arrow} height="40" alt="arrow" onClick={this.rotateImage}/>
-                  <p className="underRubrik">Total carbs</p>
+                  <p className="underRubrik" onClick={this.rotateImage}>Total carbs </p>
                 </div>>
               <div className="carbsContainer">
                 <table>
@@ -180,7 +186,7 @@ class Log extends Component {
             </div>
             <div className="valueContent">
               <input className="inputSize" type="number" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number" step="0.1" placeholder={this.state.carbs} onBlur={this.calcCarbs}></input>
-              <span className="textSize">grams</span>
+              <span className="textSize1">grams</span>
             </div>
           </div>
 

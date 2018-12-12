@@ -294,13 +294,20 @@ transition: 0.5s;
   padding-bottom: 1%;
   justify-content: space-around;
   align-items: center;
+  padding-right: 5.8%;
+  padding-bottom: 1%;
 
   /*font-size: 120%;*/
 }
 
 .textSize {
   font-size: 100%;
-  padding-left: 5px;
+  align-items: right;
+  padding-left: 76%;
+}
+
+.textSize1 {
+  font-size: 100%;
   align-items: right;
 }
 
@@ -310,8 +317,16 @@ transition: 0.5s;
   align-items: right;
   margin-bottom: 3%;
 }
+.inputSize1 {
+  font-size: 22px;
+  text-align: center;
+  align-items: right;
+  margin-left: 76%;
+}
 
 .activeInsulin {
+  font-size: 115%;
+  color: red;
 
   margin-left: 6%;
   margin-right: 28%;
@@ -365,9 +380,9 @@ border-color: rgb(210, 210, 210);
 .bsSection::before {
   content : "";
   position: absolute;
-  left    : 0%;
+  left    : 3%;
   top  : -15%;
-  width   : 100%;
+  width   : 94%;
   border-top-style: solid;
   border-width: thin;
   border-color: rgb(190, 190, 190);
@@ -376,9 +391,9 @@ border-color: rgb(210, 210, 210);
 .bsSection::after {
   content : "";
   position: absolute;
-  left    : 0%;
+  left    : 3%;
   bottom  : -10%;
-  width   : 100%;
+  width   : 94%;
   border-bottom-style: solid;
   border-width: thin;
   border-color: rgb(190, 190, 190);
@@ -387,6 +402,8 @@ border-color: rgb(210, 210, 210);
 .carbsSection {
   height: auto;
   width: auto;
+  width: auto;
+  height: auto;
   position: relative;
   z-index: 1;
   font-family: 'Source-Sans', sans-serif;
@@ -398,9 +415,9 @@ border-color: rgb(210, 210, 210);
 .carbsSection::after {
   content : "";
   position: absolute;
-  left    : 0%;
+  left    : 3%;
   bottom  : 0%;
-  width   : 100%;
+  width   : 94%;
   border-bottom-style: solid;
   border-width: thin;
   border-color: rgb(190, 190, 190);
@@ -417,9 +434,9 @@ border-color: rgb(210, 210, 210);
 .insulinSection::after {
   content : "";
   position: absolute;
-  left    : 0%;
+  left    : 3%;
   bottom  : -5%;
-  width   : 100%;
+  width   : 94%;
   border-bottom-style: solid;
   border-width: thin;
   border-color: rgb(190, 190, 190);
@@ -442,9 +459,9 @@ border-color: rgb(210, 210, 210);
   width: 100px;
   text-align: center;
   line-height: 200%;
-  margin-left: 13%;
-  margin-right: 33%;
-  margin-bottom: 4%;
+  margin-left: 5%;
+  margin-right: 40%;
+  margin-top: 6%;
   display: inline-block;
   border-style: solid;
   border-width: thin;
@@ -462,7 +479,7 @@ border-color: rgb(210, 210, 210);
 }
 
 input {
-  height: 40px;
+  height: 30px;
   width: 40px;
   border: 0.4px outset ;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
@@ -475,7 +492,7 @@ input {
   font-size: 16px;
   font-weight: bold;
   display: block;
-  padding-top: 0%;
+  padding-top: 3.5%;
 }
 
 .carbsContainer {
@@ -519,11 +536,11 @@ th, td{
   height: auto;
   width: 80px;
   margin-left: 0;
-  margin-right: 93px;
-  margin-top: 8px;
+  margin-right: 140px;
+  margin-top: 6px;
   margin-bottom: 0 !important;
   background-color: white;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); */
   border-radius: 7px;
   padding: 2px;
   display: inline-block;
@@ -534,13 +551,11 @@ th, td{
   color: #043357;
   /*font-weight: bold;*/
   height: auto;
-  width: 80px;
-  margin-left: 93px;
-  margin-right: 0;
-  margin-top: 12px;
-  margin-bottom: 0 !important;
+  margin-left: 50px;
+  margin-right: 5px;
+  margin-top: 6px;
   background-color: white;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); */
   border-radius: 7px;
   padding: 2px;
   display: inline-block;
@@ -587,24 +602,26 @@ th, td{
 
 .expandDiv{
   padding-bottom: 8%;
+  padding-left: 5%;
 }
 
 .cancel {
   margin-bottom: 3.2%;
 }
 
+
 /************* Help Page *************/
 
 .textbox {
   background-color: white;
-  padding: 20px;
-  padding-top: 1px !important;
+  padding: 5px;
+  padding-top: 5px !important;
   padding-bottom: 5px !important;
-  margin-top: 13px !important;
+  margin-top: 45px !important;
   margin: auto;
   border: 1px;
   border-radius: 18px;
-  width: 315px;
+  width: 340px;
   height: auto;
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2) !important;
 }
