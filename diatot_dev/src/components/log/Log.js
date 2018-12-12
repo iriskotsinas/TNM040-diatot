@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
 import Collapsible from 'react-collapsible';
 import arrow from '../img/arrow.svg';
-/*import down2 from '../img/down2.png';*/
+import down2 from '../img/down2.png';
 
 
 class ActiveIns {
@@ -237,7 +237,7 @@ class Log extends Component {
             <div className="actInsDiv"><span>Active insulin: {this.state.activeInsulin}</span></div>  {/*byt ut 0.93 mot variabel activeInsulin*/}
             <div className="insulinDose">
               <input className="inputSize" type="number" step="0.1" value={this.state.insulinDose} onBlur={this.calcInsManual}></input>
-              <span className="textSize"> units</span>
+              <div className="textSize2"> units</div>
             </div>
           </div>
             </div>

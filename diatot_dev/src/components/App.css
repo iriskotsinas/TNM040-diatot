@@ -311,23 +311,38 @@ transition: 0.5s;
   align-items: right;
 }
 
+.textSize2 {
+  font-size: 100%;
+  align-items: right;
+  padding-left: 30%;
+  padding-right: 40%;
+}
+
 .inputSize {
-  font-size: 22px;
+  font-size: 16px;
   text-align: center;
   align-items: right;
   margin-bottom: 1%;
 }
 .inputSize1 {
-  font-size: 22px;
+  font-size: 16px;
   text-align: center;
   align-items: right;
   margin-left: 76%;
 }
 
+.insulinSecDiv{
+  font-size: 22px;
+  text-align: center;
+  margin-left: 76%;
+  height: auto;
+  float: right;
+}
+
 .activeInsulin {
   font-size: 115%;
   color: red;
-
+  float: left;
   margin-left: 6%;
   margin-right: 28%;
 }
@@ -478,7 +493,7 @@ border-color: rgb(210, 210, 210);
 }
 
 input {
-  height: 30px;
+  height: 25px;
   width: 40px;
   border: 0.4px outset ;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
@@ -594,7 +609,20 @@ th, td{
 
 
 /************* Help Page *************/
+.backButton {
+  font-size: 14px;
+  color: #043357;
+  font-weight: bold;
+  height: auto;
+  width: 80px;
 
+  margin-top: 6px;
+  margin-bottom: 0 !important;
+  background-color: white;
+  /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); */
+  border-radius: 7px;
+  padding: 2px;
+}
 .textbox {
   background-color: white;
   padding: 5px;
@@ -609,20 +637,40 @@ th, td{
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2) !important;
 }
 
-.backButton {
-  font-size: 18px;
-  color: white;
+.textStyleHelp {
+  /*font-size: 14px;
+  color: grey;
   font-weight: bold;
-  height: auto;
-  width: 100px;
-  margin: 18px;
-  margin-top: 55px;
-  background-color: #9BB9D0;
-  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 14px;
-  padding: 10px;
+  text-align: left;*/
+
+  font-size: 16px;
+  /*font-weight: 500;
+  font-style:  bold;*/
+  padding-left: 3%;
+  padding-right: 3%;
+  text-align: left;
+  font-family: 'PT+Sans', sans-serif !important;
 }
 
+.textStyleHelp2 {
+  /*font-size: 10px;
+  color: grey;
+  font-weight: lighter;
+  font-weight: bold;*/
+  text-align: left;
+  font-weight:100;
+  font-size: 12px;;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-family: 'PT+Sans', sans-serif !important;
+}
+
+.log2 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 30px;
+  /*font-weight: bold;*/
+}
 
 /* ----------- iPhone 4 and 4S ----------- */
 
