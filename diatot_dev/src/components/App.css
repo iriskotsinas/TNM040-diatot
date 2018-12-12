@@ -315,7 +315,7 @@ transition: 0.5s;
   font-size: 22px;
   text-align: center;
   align-items: right;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
 }
 .inputSize1 {
   font-size: 22px;
@@ -402,8 +402,7 @@ border-color: rgb(210, 210, 210);
 .carbsSection {
   height: auto;
   width: auto;
-  width: auto;
-  height: auto;
+
   position: relative;
   z-index: 1;
   font-family: 'Source-Sans', sans-serif;
@@ -564,39 +563,19 @@ th, td{
 .arrow {
   height: 22px;
   width: auto;
-  /*padding-top: 10px;*/
   text-align: left;
   display: block;
   float: left;
-  /*-webkit-transform: rotate(-90deg);*/
   transition: 0.25s;
 }
 
 .arrowRot {
-  /*
-  -webkit-transform: rotate(0deg);
-  text-align: left;
-  display: block;
-  float:left;
-  */
-
-
-  /*
-    padding-top: 1px;
-    margin-left: -80%;
-    height: 22px;
-    width: auto;
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transition: 0.25s; */
-
   height: 22px;
   width: auto;
   -webkit-transform: rotate(90deg);
   float: left;
   display: block;
   text-align: left;
-  /*-webkit-transform: rotate(0deg);*/
   transition: 0.25s;
 }
 

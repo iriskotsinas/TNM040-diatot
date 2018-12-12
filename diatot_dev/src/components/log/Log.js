@@ -4,6 +4,27 @@ import Collapsible from 'react-collapsible';
 import arrow from '../img/arrow.svg';
 import down2 from '../img/down2.png';
 
+
+class ActiveIns {
+  constructor(insulinDose, activeInsulinTime){
+      this.insulinDose = insulinDose;
+      this.activeInsulinTime = activeInsulinTime;
+      this.creationDate = new Date();
+      this.actInsSpeed =  this.insulinDose / this.activeInsulinTime;
+  }
+
+  /* MÅSTE JUSTERAS FÖR ATT MINSKA AKTIVT INSULIN I FÖRHÅLLANDE TILL TIDEN */
+  calcActiveInsComponent(){
+    let actIns = this.activeInsulin - (new Date() - this.creationDate) * this.actInsSpeed;
+
+    if (actIns <= 0) {
+      return 0.0;
+    } else {
+      return actIns
+    }
+  }
+}
+
 class Log extends Component {
   constructor(props){
     super(props);
@@ -15,7 +36,8 @@ class Log extends Component {
       carbRatio: 11.50,  /* 11.50 */
       corrRatio: 4.30, /*4.30*/
       bgTarget: 6.0,
-      activeInsulin: 0.93,
+      activeInsulin: 0,
+      activeInsulinList: [],
       activeInsulinTime: 4.0,
       zero: 0.0,
       date: new Date()
@@ -69,14 +91,30 @@ class Log extends Component {
 
   /* MÅSTE JUSTERAS FÖR ATT MINSKA AKTIVT INSULIN I FÖRHÅLLANDE TILL TIDEN */
   calcActiveInsulin(){
-    let actInsSpeed =  this.state.insulinDose / this.state.activeInsulinTime;
-    let actIns = this.state.activeInsulin - this.state.activeInsulin * actInsSpeed;
+    let x = 0.0;
 
-    if (actIns <= 0) {
-      return 0.0;
-    } else {
-      return actIns
+    for(let i=0; i < this.state.activeInsulinList.length; i++) {
+      x += this.state.activeInsulinList[i];
     }
+    /*return x;*/
+
+    this.setState({
+      activeInsulin: x
+    })
+  }
+
+  addActiveInsulin(){
+    let dummyList = this.state.activeInsulinList.slice().push(
+        new ActiveIns(5, this.state.activeInsulinTime)
+    );
+
+
+    /*this.calcActiveInsulin():*/
+
+    this.setState({
+      activeInsulinList: dummyList
+    })
+
   }
 
   /* Set carbs */
@@ -196,7 +234,7 @@ class Log extends Component {
         <div className="insulinSection">
           <h5>Insulin dose</h5>
           <div className="insulinContent">
-            <div className="actInsDiv"><span>Active insulin: 0.93</span></div>  {/*byt ut 0.93 mot variabel activeInsulin*/}
+            <div className="actInsDiv"><span>Active insulin: {this.state.activeInsulin}</span></div>  {/*byt ut 0.93 mot variabel activeInsulin*/}
             <div className="insulinDose">
               <input className="inputSize" type="number" step="0.1" value={this.state.insulinDose} onBlur={this.calcInsManual}></input>
               <span className="textSize"> units</span>
@@ -207,7 +245,7 @@ class Log extends Component {
 
             {/*SAVE BUTTON*/}
             <NavLink to="mainpage" style={{textDecoration: 'none'}}>
-              <div className="mainButton" style={{marginTop: '10%'}}>Save</div>
+              <div className="mainButton" style={{marginTop: '10%'}} onClick="calcActiveInsulin">Save</div>
               {/* LÄGG TILL NY LOG I LOG-BOK */}
             </NavLink>
 
