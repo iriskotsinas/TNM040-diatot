@@ -184,10 +184,9 @@ class Log extends Component {
         {/*INSULIN SECTION*/}
         <div className="insulinSection">
           <h5>Insulin dose</h5><div>
-
+          <div className="activeInsulin">Active insulin: 0.93</div>  {/*byt ut 0.93 mot variabel activeInsulin*/}
           <input className="inputSize1" type="number" step="0.1" value={this.state.insulinDose} onBlur={this.calcInsManual}></input>
           <div className="textSize"> units</div>
-          <div className="activeInsulin">Active insulin: 0.93</div>  {/*byt ut 0.93 mot variabel activeInsulin*/}
           </div>
         </div>
 
