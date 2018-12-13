@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Layout, Content} from 'react-mdl';
-import backWhite from './img/backWhite.png';
+import backpil from './img/backpil.png';
 import { NavLink } from 'react-router-dom';
 
 export default class Help extends Component {
@@ -16,7 +16,7 @@ export default class Help extends Component {
           <div className="textbox">
           <NavLink to="mainpage" style={{textDecoration: 'none'}}>
             <div className="backButton">
-              <img className="back" src={backWhite} height="20" alt="backWhite"/>   Go back
+              <img className="back" src={backpil} height="20" alt="backpil"/>   Go back
             </div>
           </NavLink>
           <h3 className="log2">Help </h3>
