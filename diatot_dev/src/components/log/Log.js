@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
 import Collapsible from 'react-collapsible';
-import sensorwhite from '/Users/emmasegolsson/Documents/koma-projekt/diatot/diatot_dev/diatot_dev/src/components/img/sensorwhite.png';
+import sensorwhite from '../img/sensor_icon_50p.png';
 import cross from '../img/cross.png';
 import arrow from '../img/arrow.svg';
 import cirkel from '../img/cirkel.png';

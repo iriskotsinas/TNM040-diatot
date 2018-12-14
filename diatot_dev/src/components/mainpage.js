@@ -3,7 +3,6 @@ import { Layout, Content} from 'react-mdl';
 import { NavLink } from 'react-router-dom';
 import './App.css';
 import bloodglucose from './img/bloodglucose.png';
-/* import blood_drop from './img/blood_drop.png'; */
 import sensor_icon_50p from './img/sensor_icon_50p.png';
 import sensor_icon_dark_50p from './img/sensor_icon_dark_50p.png';
 
@@ -52,7 +51,7 @@ export default class mainpage extends Component {
                {/* SLOPA DENNA TYCKER JAG */} <div className="smallButton">Log book</div>
              {/*  <img className ="blood_drop" src={blood_drop} alt="blood_drop" /> */}
               </div>
-              
+
             </Content>
           </Layout>
         </div>
