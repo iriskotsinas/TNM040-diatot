@@ -12,28 +12,53 @@ import pil2 from './components/img/pil2.png';
 class App extends Component {
 
   constructor() {
-      super();
-      this.state = {
-        showPopup: false
-      };
+    super();
+    this.state = {
+      showPopup: false,
+      activeInsulinList: []
+    };
+  }
+
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
+
+
+  state = { show: false };
+
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+
+
+  /* -------------------------------- */
+/*  calcActiveInsulin(){
+    let x = 0.0;
+
+    for(let i=0; i < this.state.activeInsulinList.length; i++) {
+      x += this.state.activeInsulinList[i];
     }
+    return x;
+  }
 
-    togglePopup() {
-      this.setState({
-        showPopup: !this.state.showPopup
-      });
-    }
+  addActiveInsulin(){
+    let dummyList = this.state.activeInsulinList.slice().push(
+      new ActiveIns(5, this.state.activeInsulinTime)
+    );
 
+    this.setState({
+      activeInsulinList: dummyList,
+    })
+  }*/
 
-      state = { show: false };
+  /* -------------------------------- */
 
-      showModal = () => {
-        this.setState({ show: true });
-      };
-
-      hideModal = () => {
-        this.setState({ show: false });
-      };
 
   render() {
     return (
@@ -57,49 +82,49 @@ class App extends Component {
               <Navigation>
                 <a href="/mainpage">
                   <img className="pointer" src={pil2} height="23" alt="pil2"/>   Go to start page</a>
-                <a href="/">
-                  <img className="pointer" src={pil2} height="23" alt="pil2"/>   Log book</a>
-                <br></br><br></br><br></br>
-                <h2>------Settings------</h2>
-                <a href="/">
-                  <img className="pointer" src={pil2} height="23" alt="pil2"/>   General</a>
-                <a href="/">
-                  <img className="pointer" src={pil2} height="23" alt="pil2"/>   Insulin</a>
-                <a href="/">
-                  <img className="pointer" src={pil2} height="23" alt="pil2"/>   Dosing</a>
-                <a href="/">
-                  <img className="pointer" src={pil2} height="23" alt="pil2"/>   Carbs</a>
-              </Navigation>
-            </Drawer>
+                  <a href="/">
+                    <img className="pointer" src={pil2} height="23" alt="pil2"/>   Log book</a>
+                    <br></br><br></br><br></br>
+                    <h2>------Settings------</h2>
+                    <a href="/">
+                      <img className="pointer" src={pil2} height="23" alt="pil2"/>   General</a>
+                      <a href="/">
+                        <img className="pointer" src={pil2} height="23" alt="pil2"/>   Insulin</a>
+                        <a href="/">
+                          <img className="pointer" src={pil2} height="23" alt="pil2"/>   Dosing</a>
+                          <a href="/">
+                            <img className="pointer" src={pil2} height="23" alt="pil2"/>   Carbs</a>
+                          </Navigation>
+                        </Drawer>
 
-            <Route exact={true} path='/' render={() => (
-                <div className="App">
-                  <Mainpage/>
-                </div>
-              )}/>
+                        <Route exact={true} path='/' render={() => (
+                            <div className="App">
+                              <Mainpage/>
+                            </div>
+                          )}/>
 
-              <Route exact={true} path='/newlog' render={() => (
-                  <div className="App">
-                    <Newlog/>
-                  </div>
-                )}/>
+                          <Route exact={true} path='/newlog' render={() => (
+                              <div className="App">
+                                <Newlog/>
+                              </div>
+                            )}/>
 
-                <Route exact={true} path='/mainpage' render={() => (
-                    <div className="App">
-                      <Mainpage/>
-                    </div>
-                )}/>
+                            <Route exact={true} path='/mainpage' render={() => (
+                                <div className="App">
+                                  <Mainpage/>
+                                </div>
+                              )}/>
 
-                <Route exact={true} path='/help' render={() => (
-                    <div className="App">
-                      <Help/>
-                    </div>
-                )}/>
+                              <Route exact={true} path='/help' render={() => (
+                                  <div className="App">
+                                    <Help/>
+                                  </div>
+                                )}/>
 
-                </Layout>
-              </div>
-            </HashRouter>
-          );
-        }
-      }
-      export default App;
+                              </Layout>
+                            </div>
+                          </HashRouter>
+                        );
+                      }
+                    }
+                    export default App;

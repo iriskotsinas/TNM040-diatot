@@ -7,6 +7,7 @@ import cirkel from '../img/cirkel.png';
 
 /*
 class ActiveIns {
+
   constructor(insulinDose, activeInsulinTime){
       this.insulinDose = insulinDose;
       this.activeInsulinTime = activeInsulinTime;
@@ -27,6 +28,8 @@ class ActiveIns {
     }
   }
 }*/
+
+/*  onClick={this.clearAll()} */
 
 class Log extends Component {
   constructor(props){
@@ -91,6 +94,7 @@ class Log extends Component {
     return carbDose + corrDose - this.state.activeInsulin;
   }
 
+  /* Manual input insulin -- NOT DONE */
   /*
   calcInsManual(e){
     let x = Number.parseFloat(e.target.value);
@@ -114,9 +118,6 @@ class Log extends Component {
       activeInsulin: x
     })
   }
-
-
-
 
   /* Format date */
   formatDate() {
@@ -152,16 +153,23 @@ class Log extends Component {
     this.setState({
       arrowClass: classname
     })
-
   }
 
   /* Clear all function */
+
+/*
   clearAll(){
 
-  };
+      this.state.bloodSugar = 0.0;
+      this.state.carbs = 0.0;
+      this.state.insulinDose = 0.0;
+
+}*/
 
 
   render(){
+    /*const activeInsulin = this.calcActiveInsulin()*/
+
     return (
       <div>
 
@@ -182,7 +190,7 @@ class Log extends Component {
         {/*BS SECTION*/}
         <div className="bsSection">
           <h5 className="sectionhead">Blood sugar</h5>
-          <div className="miniButton"  onClick={this.clearAll}>CGM</div>
+          <div className="miniButton">CGM</div>
           <input className="inputSize" type="number" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number" step="0.1" placeholder={this.state.bloodSugar} onBlur={this.calcBS}></input>
           <span className="textSize">mmol/L</span>
         </div>
