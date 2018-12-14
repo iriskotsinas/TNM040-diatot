@@ -4,7 +4,9 @@
   "private": true,
   "homepage": "http://www.student.itn.liu.se/~jacmo699/tnm040/diatot",
   "dependencies": {
+    "@material-ui/core": "^3.6.2",
     "@trendmicro/react-buttons": "^1.3.1",
+    "material-ui": "^0.20.2",
     "moment": "^2.22.2",
     "react": "^16.6.1",
     "react-button-component": "^1.0.0",

@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
 import Collapsible from 'react-collapsible';
+import sensorwhite from '/Users/emmasegolsson/Documents/koma-projekt/diatot/diatot_dev/diatot_dev/src/components/img/sensorwhite.png';
 import cross from '../img/cross.png';
 import arrow from '../img/arrow.svg';
 import cirkel from '../img/cirkel.png';
+
+
+
+
 
 /*
 class ActiveIns {
@@ -55,6 +60,10 @@ class Log extends Component {
     this.calcInsulin = this.calcInsulin.bind(this);
     /*this.calcInsManual = this.calcInsManual.bind(this);*/
   }
+
+  /* Responsive popup */
+
+
 
   /* Set blood sugar */
   calcBS(a){
@@ -190,10 +199,13 @@ class Log extends Component {
         {/*BS SECTION*/}
         <div className="bsSection">
           <h5 className="sectionhead">Blood sugar</h5>
-          <div className="miniButton">CGM</div>
+          <div className="miniButton"  onClick={this.clearAll}>CGM <img className="sensorwhite"src={sensorwhite} height="12" alt="sensorwhite"/></div>
+
+
           <input className="inputSize" type="number" min="0" inputmode="numeric" pattern="[0-9]*" title="Non-negative integral number" step="0.1" placeholder={this.state.bloodSugar} onBlur={this.calcBS}></input>
           <span className="textSize">mmol/L</span>
         </div>
+
 
         {/*CARBS SECTION*/}
         <div className= "bsSection">
@@ -263,6 +275,7 @@ class Log extends Component {
               <div className="mainButton" style={{marginTop: '10%'}} >Save</div> {/*onClick={this.calcActiveInsulin()}*/}
               {/* LÄGG TILL NY LOG I LOG-BOK */}
             </NavLink>
+
 
           </div>
         )

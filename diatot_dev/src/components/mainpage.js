@@ -52,6 +52,7 @@ export default class mainpage extends Component {
                {/* SLOPA DENNA TYCKER JAG */} <div className="smallButton">Log book</div>
              {/*  <img className ="blood_drop" src={blood_drop} alt="blood_drop" /> */}
               </div>
+              
             </Content>
           </Layout>
         </div>
